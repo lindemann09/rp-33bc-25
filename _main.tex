@@ -202,7 +202,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Data Processing and Analysis in R (2025)},
+  pdftitle={Data Processing and Analysis in R (2025/26)},
   pdfauthor={Oliver Lindemann},
   colorlinks=true,
   linkcolor={violet},
@@ -211,7 +211,7 @@
   urlcolor={blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Data Processing and Analysis in \emph{R} (2025)}
+\title{Data Processing and Analysis in \emph{R} (2025/26)}
 \author{Oliver Lindemann}
 \date{2026-01-20}
 
@@ -986,7 +986,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.2718076 2.1362195 0.5660812 0.1525425 0.7252179
+## [1]  1.0429065 -1.4476498  2.6128252  0.5248141 -1.2599314
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -1000,7 +1000,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  95.83579 100.47055 144.71468  83.11898 112.95484
+## [1] 102.87040  83.74334 103.44888 110.44034 116.02681
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1245,8 +1245,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.1300833 0.1219732 0.5570423 0.8648959 0.2823976 0.1784698 0.6370489
-##  [8] 0.1815809 0.5214624 0.2733842
+##  [1] 0.42092845 0.59985314 0.86084274 0.34687757 0.61261365 0.59369685
+##  [7] 0.03833294 0.43538724 0.02478396 0.38452203
 \end{verbatim}
 
 \begin{Shaded}
@@ -1256,8 +1256,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 76.31545 76.28789 38.45074 23.72716 40.22339 21.24383 85.13551 91.63247
-##  [9] 89.24690 59.45705
+##  [1] 24.47618 91.69826 84.75839 37.33906 50.44848 61.80493 43.93843 64.64962
+##  [9] 96.48191 38.49764
 \end{verbatim}
 
 \begin{geek}
@@ -1944,14 +1944,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a         variable_b        variable_c
-##  Min.   :-290.565   Min.   :-1.7766   Min.   :10  
-##  1st Qu.:  -2.944   1st Qu.:-0.3103   1st Qu.:10  
-##  Median :  65.577   Median : 0.3668   Median :10  
-##  Mean   :  68.793   Mean   : 0.3559   Mean   :10  
-##  3rd Qu.: 128.159   3rd Qu.: 0.9480   3rd Qu.:10  
-##  Max.   : 452.055   Max.   : 2.7077   Max.   :10  
-##                     NA's   :131
+##    variable_a        variable_b         variable_c
+##  Min.   :-192.84   Min.   :-1.89318   Min.   :10  
+##  1st Qu.:  11.10   1st Qu.:-0.97415   1st Qu.:10  
+##  Median :  67.50   Median : 0.07974   Median :10  
+##  Mean   :  72.37   Mean   : 0.03125   Mean   :10  
+##  3rd Qu.: 140.04   3rd Qu.: 0.77959   3rd Qu.:10  
+##  Max.   : 370.52   Max.   : 2.17684   Max.   :10  
+##                    NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2278,7 +2278,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are grand!"
+## [1] "You are extraordinary!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -4324,7 +4324,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5588317
+## [1] 0.5575715
 \end{verbatim}
 
 \webexunhide
