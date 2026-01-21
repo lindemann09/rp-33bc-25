@@ -331,7 +331,7 @@ manually deleting NA
 <div id="missings-in-data-frames" class="section level2 hasAnchor" number="14.2">
 <h2><span class="header-section-number">14.2</span> Missings in data frames<a href="missing-values.html#missings-in-data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The datasets that we have used in the previous chapter were always complete and did not contain any missing data point. In real life, however, you often encounter the situation that you are missing some measurements in some variables. In other words, not all subjects provide a measurement in all columns. This might cause problems for the data processing and we need to deal with that issue.</p>
-<p>The <a href="./data">data folder</a> contains a second (more realistic) version of the teaching method dataset called <code>teaching_method2.csv</code>. Let’s have a look at it.</p>
+<p>The data folder on Canvas contains a second (more realistic) version of the teaching method dataset called <code>teaching_method2.csv</code>. Let’s have a look at it.</p>
 <div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="missing-values.html#cb239-1" tabindex="-1"></a>teach <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/teaching_method2.csv&quot;</span>)</span>
 <span id="cb239-2"><a href="missing-values.html#cb239-2" tabindex="-1"></a><span class="fu">summary</span>(teach)</span></code></pre></div>
 <pre><code>##     student     teaching_method        city               time          

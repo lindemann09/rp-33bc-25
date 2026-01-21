@@ -986,7 +986,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  1.3880256 -2.0645487 -0.6307840  0.7434326 -1.1813594
+## [1]  1.21249688  0.45902166 -0.03004179 -1.03397066 -0.65574196
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -1000,7 +1000,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  86.45084 125.56957 114.98579  86.80684  69.02748
+## [1]  97.79548  99.82795  98.99541 126.16714 104.39689
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1245,8 +1245,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.61775730 0.91501892 0.57081123 0.12292900 0.27556523 0.08318522
-##  [7] 0.22068824 0.80276579 0.03474668 0.11983645
+##  [1] 0.53625379 0.44727440 0.86830016 0.17653101 0.02954983 0.17925107
+##  [7] 0.63134014 0.26579400 0.52073469 0.16154519
 \end{verbatim}
 
 \begin{Shaded}
@@ -1256,8 +1256,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 72.60655 33.51820 94.65071 24.96812 31.41633 31.39495 27.83695 36.84745
-##  [9] 62.13474 48.70652
+##  [1] 61.49809 24.72822 93.72549 88.60405 67.51019 61.65035 33.87674 64.68645
+##  [9] 35.03563 75.13011
 \end{verbatim}
 
 \begin{geek}
@@ -1944,14 +1944,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a        variable_b        variable_c
-##  Min.   :-168.09   Min.   :-2.4791   Min.   :10  
-##  1st Qu.:  17.75   1st Qu.:-0.5728   1st Qu.:10  
-##  Median :  82.59   Median : 0.3168   Median :10  
-##  Mean   :  82.95   Mean   : 0.2954   Mean   :10  
-##  3rd Qu.: 143.19   3rd Qu.: 1.0146   3rd Qu.:10  
-##  Max.   : 370.72   Max.   : 3.2671   Max.   :10  
-##                    NA's   :131
+##    variable_a         variable_b         variable_c
+##  Min.   :-224.768   Min.   :-1.96899   Min.   :10  
+##  1st Qu.:   9.339   1st Qu.:-0.63164   1st Qu.:10  
+##  Median :  84.814   Median :-0.06982   Median :10  
+##  Mean   :  78.979   Mean   : 0.04153   Mean   :10  
+##  3rd Qu.: 146.563   3rd Qu.: 0.70548   3rd Qu.:10  
+##  Max.   : 367.435   Max.   : 2.23083   Max.   :10  
+##                     NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2278,7 +2278,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are sublime!"
+## [1] "You are prime!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -2365,7 +2365,7 @@ Writing
 
 As you see, different packages that are dealing with data import. You have already installed the packages \texttt{readxl} and \texttt{readr} in the previous exercise.
 
-\textbf{Example data}: You find some example data files in the \href{./data}{data folder}.
+\textbf{Example data}: You find some example data files in the data folder on Canvas.
 
 \subsection{Import via RStudio interface}\label{import-via-rstudio-interface}
 
@@ -2483,13 +2483,13 @@ As with all \emph{R} -packages, if you want to make use of it in yours scripts, 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching core tidyverse packages ----------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
+## -- Attaching core tidyverse packages ------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse 2.0.0 --
 ## v dplyr     1.1.4     v readr     2.1.5
 ## v forcats   1.0.0     v stringr   1.5.1
 ## v ggplot2   3.5.2     v tibble    3.3.0
 ## v lubridate 1.9.4     v tidyr     1.3.1
 ## v purrr     1.1.0     
-## -- Conflicts ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
@@ -2543,7 +2543,7 @@ I personally also prefer to use the underscore sign (as you have seen in the exa
 \subsubsection*{Example data}\label{example-data}
 \addcontentsline{toc}{subsubsection}{Example data}
 
-To illustrate the \emph{Tidyverse}-functions for data transformation, we use an example dataset \texttt{teaching\_method.csv} from that \href{./data}{data folder}.
+To illustrate the \emph{Tidyverse}-functions for data transformation, we use an example dataset \texttt{teaching\_method.csv} from that data folder on Canvas.
 
 The fake dataset looks like this (only 6 first rows are depicted):
 
@@ -3449,7 +3449,7 @@ In contrast, in the \textbf{wide data} format at the \textbf{left} all measureme
 
 \subsubsection{Pivoting functions}\label{pivoting-functions}
 
-\emph{Tidyverse} offers the functions \texttt{pivot\_longer()} and \texttt{pivot\_wider()} to convert data between the two formats. For example, the file \texttt{weight.csv} \href{./data}{data folder} contains the data above in the wide data format (left part of Table \ref{tab:longwide}).
+\emph{Tidyverse} offers the functions \texttt{pivot\_longer()} and \texttt{pivot\_wider()} to convert data between the two formats. For example, the file \texttt{weight.csv} (see data on Canvas) contains the data above in the wide data format (left part of Table \ref{tab:longwide}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3663,7 +3663,7 @@ That is a problem, because we typically just want to ignore \texttt{NA} and calc
 
 The datasets that we have used in the previous chapter were always complete and did not contain any missing data point. In real life, however, you often encounter the situation that you are missing some measurements in some variables. In other words, not all subjects provide a measurement in all columns. This might cause problems for the data processing and we need to deal with that issue.
 
-The \href{./data}{data folder} contains a second (more realistic) version of the teaching method dataset called \texttt{teaching\_method2.csv}. Let's have a look at it.
+The data folder on Canvas contains a second (more realistic) version of the teaching method dataset called \texttt{teaching\_method2.csv}. Let's have a look at it.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4324,7 +4324,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5492841
+## [1] 0.580624
 \end{verbatim}
 
 \webexunhide
