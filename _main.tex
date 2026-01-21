@@ -213,7 +213,7 @@
 
 \title{Data Processing and Analysis in \emph{R} (2025/26)}
 \author{Oliver Lindemann}
-\date{2026-01-20}
+\date{2026-01-21}
 
 \begin{document}
 \maketitle
@@ -986,7 +986,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  0.6440544 -0.7247936 -0.1665819 -0.9705881 -1.9725351
+## [1]  1.3880256 -2.0645487 -0.6307840  0.7434326 -1.1813594
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -1000,7 +1000,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  72.08620  85.44885  90.99715  81.86713 113.32584
+## [1]  86.45084 125.56957 114.98579  86.80684  69.02748
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1245,8 +1245,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.6805259599 0.4364465824 0.8698905064 0.3305189516 0.6879990897
-##  [6] 0.5235166729 0.0008899178 0.0305801290 0.6894016298 0.1380087207
+##  [1] 0.61775730 0.91501892 0.57081123 0.12292900 0.27556523 0.08318522
+##  [7] 0.22068824 0.80276579 0.03474668 0.11983645
 \end{verbatim}
 
 \begin{Shaded}
@@ -1256,8 +1256,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 32.92033 64.86934 14.46652 93.28816 38.32434 48.50926 81.76971 78.29710
-##  [9] 92.67091 88.70101
+##  [1] 72.60655 33.51820 94.65071 24.96812 31.41633 31.39495 27.83695 36.84745
+##  [9] 62.13474 48.70652
 \end{verbatim}
 
 \begin{geek}
@@ -1944,14 +1944,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a         variable_b        variable_c
-##  Min.   :-174.214   Min.   :-2.3503   Min.   :10  
-##  1st Qu.:  -1.238   1st Qu.:-0.9380   1st Qu.:10  
-##  Median :  67.664   Median :-0.2574   Median :10  
-##  Mean   :  70.666   Mean   :-0.1690   Mean   :10  
-##  3rd Qu.: 141.693   3rd Qu.: 0.6167   3rd Qu.:10  
-##  Max.   : 420.745   Max.   : 1.7463   Max.   :10  
-##                     NA's   :131
+##    variable_a        variable_b        variable_c
+##  Min.   :-168.09   Min.   :-2.4791   Min.   :10  
+##  1st Qu.:  17.75   1st Qu.:-0.5728   1st Qu.:10  
+##  Median :  82.59   Median : 0.3168   Median :10  
+##  Mean   :  82.95   Mean   : 0.2954   Mean   :10  
+##  3rd Qu.: 143.19   3rd Qu.: 1.0146   3rd Qu.:10  
+##  Max.   : 370.72   Max.   : 3.2671   Max.   :10  
+##                    NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2278,7 +2278,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are exquisite!"
+## [1] "You are sublime!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -2483,13 +2483,13 @@ As with all \emph{R} -packages, if you want to make use of it in yours scripts, 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching core tidyverse packages -------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
+## -- Attaching core tidyverse packages ----------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
 ## v dplyr     1.1.4     v readr     2.1.5
 ## v forcats   1.0.0     v stringr   1.5.1
 ## v ggplot2   3.5.2     v tibble    3.3.0
 ## v lubridate 1.9.4     v tidyr     1.3.1
 ## v purrr     1.1.0     
-## -- Conflicts -------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
@@ -4324,7 +4324,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5521301
+## [1] 0.5492841
 \end{verbatim}
 
 \webexunhide
@@ -4693,18 +4693,51 @@ The course ends with a little exam on campus. Please look at your timetable on C
 \item
   You have \textbf{3 hours} time to do this and to \textbf{upload your script to Canvas}. Please note that there is a strict deadline of 3 hours and you can not upload your script afterwards.
 \item
-  During the exam, an invigilator will come by and carry out an identity check. To do this, have your ID, driver's license, residence permit or possibly a physical student card ready on the top left corner of your table. The invigilator will wear gloves and a mask.
+  During the exam, an invigilator will come by and carry out an identity check. To do this, have your ID, driver's license, residence permit or possibly a physical student card ready on the top left corner of your table.
 \end{itemize}
 
-\subsection*{What is allowed to use and what will be consider as an attempt of fraud?}\label{what-is-allowed-to-use-and-what-will-be-consider-as-an-attempt-of-fraud}
-\addcontentsline{toc}{subsection}{What is allowed to use and what will be consider as an attempt of fraud?}
+\subsection*{What is allowed and what is considered fraud?}\label{what-is-allowed-and-what-is-considered-fraud}
+\addcontentsline{toc}{subsection}{What is allowed and what is considered fraud?}
+
+\subsubsection*{Permitted Resources (Open-Book \& Search)}\label{permitted-resources-open-book-search}
+\addcontentsline{toc}{subsubsection}{Permitted Resources (Open-Book \& Search)}
 
 \begin{itemize}
 \tightlist
 \item
-  You are allowed to use the internet and any materials that you have on your computer.
+  You are allowed to bring and use your own laptop.
 \item
-  However, it's \textbf{not} allowed to directly ask others for help, to exchange any code or to communicate with someone online. That is, \textbf{any usage of emails, chat clients/websites, the posting of questions in an online forum/newsgroups as well as the use of mobile phones will be consider as an attempt of fraud}.
+  You are allowed to use any materials stored locally on your computer (notes, previous scripts), however see points 2 and 3 below.
+\item
+  You are allowed to use the internet for \textbf{searching documentation and troubleshooting syntax}.
+\item
+  To ensure fairness and avoid AI-generated shortcuts, you are only permitted to use \href{https://www.startpage.com}{Startpage.com} as your search engine. Startpage provides standard search results without integrated AI-generative summaries.
+\end{itemize}
+
+\subsubsection*{Strict Prohibition of AI and LLMs}\label{strict-prohibition-of-ai-and-llms}
+\addcontentsline{toc}{subsubsection}{Strict Prohibition of AI and LLMs}
+
+\begin{itemize}
+\tightlist
+\item
+  The use of \textbf{Generative AI or Large Language Models} (LLMs)---including but not limited to ChatGPT, Gemini, Claude, or GitHub Copilot---is \textbf{strictly prohibited}.
+\item
+  For the exam, using AI to generate code logic, explain exam questions, or debug your script will be considered a serious attempt at fraud.
+\item
+  Proctoring: Invigilators will perform ``screen sweeps.'' If an AI interface (chat bubbles, ``Generate'' buttons, or the characteristic scrolling text of an LLM) is visible on your screen, it will be flagged immediately.
+\end{itemize}
+
+\subsubsection*{Communication and Collaboration}\label{communication-and-collaboration}
+\addcontentsline{toc}{subsubsection}{Communication and Collaboration}
+
+\begin{itemize}
+\tightlist
+\item
+  It is not allowed to directly ask others for help, to exchange any code, or to communicate with someone online.
+\item
+  Any usage of emails, chat clients/websites (e.g., Discord, WhatsApp), or the posting of new questions in online forums/newsgroups will be considered an attempt at fraud.
+\item
+  The use of mobile phones is strictly prohibited. They must be completely switched off and put away during the exam.
 \end{itemize}
 
 \end{document}
