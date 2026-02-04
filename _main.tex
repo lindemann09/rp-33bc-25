@@ -251,10 +251,6 @@ At the end of the course the student will be able to develop scripts in the prog
   descriptive statistics
 \end{itemize}
 
-\textbf{Course requirements}
-
-For information about the structure of the course, the weekly assignments, the course exam and a schedule with the lectures and the practical skills group meetings, please visit the Canvas pages of this block.
-
 \textbf{Manual}
 
 This manual guides you though the \emph{R} course and explains all concepts you need to know and points to relevant online resources.
@@ -428,11 +424,6 @@ can not solve the problem yourself, ask your question during the
 \textbf{tutorial sessions}. The idea of the tutorial sessions is to
 provide hands-on support you need to do the exercises and answer all
 your questions. Make use of this sessions.
-
-You might also use the \textbf{Canvas discussions} of this course and
-ask others students, which likely stumble over the same issue. If many
-students use this course discussion of exchange, I can become a very
-productive tool.
 \end{important}
 
 \newpage
@@ -986,7 +977,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.1819031  1.0548009  0.8954505 -0.8035507 -0.7605449
+## [1]  0.22852171  1.24762981  0.41265151  0.04541299 -1.10820437
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -1000,7 +991,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  80.95125  99.06076  94.99644  88.17029 125.76127
+## [1] 111.45640  84.09648  78.34766 111.60283 112.69458
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1245,8 +1236,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.8147170 0.7248805 0.8686992 0.4515266 0.1662167 0.4758145 0.3911869
-##  [8] 0.8863865 0.3667080 0.5476188
+##  [1] 0.6785020 0.7791835 0.4894437 0.9003100 0.5448467 0.4159843 0.5354763
+##  [8] 0.3897191 0.6290094 0.1822119
 \end{verbatim}
 
 \begin{Shaded}
@@ -1256,8 +1247,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 36.48481 67.19140 19.65441 10.85729 98.25551 23.18088 91.23367 42.10710
-##  [9] 83.98895 94.40806
+##  [1] 95.13662 79.04707 30.72526 66.05916 65.13891 74.88535 24.15278 61.40603
+##  [9] 76.17453 67.19302
 \end{verbatim}
 
 \begin{geek}
@@ -1944,14 +1935,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a        variable_b        variable_c
-##  Min.   :-347.47   Min.   :-2.8424   Min.   :10  
-##  1st Qu.:  10.79   1st Qu.:-0.8023   1st Qu.:10  
-##  Median :  75.34   Median :-0.3726   Median :10  
-##  Mean   :  67.77   Mean   :-0.2175   Mean   :10  
-##  3rd Qu.: 126.51   3rd Qu.: 0.4456   3rd Qu.:10  
-##  Max.   : 342.13   Max.   : 2.4283   Max.   :10  
-##                    NA's   :131
+##    variable_a         variable_b          variable_c
+##  Min.   :-289.528   Min.   :-1.895718   Min.   :10  
+##  1st Qu.:  -9.694   1st Qu.:-0.676476   1st Qu.:10  
+##  Median :  62.118   Median :-0.105807   Median :10  
+##  Mean   :  64.058   Mean   :-0.006534   Mean   :10  
+##  3rd Qu.: 134.297   3rd Qu.: 0.497445   3rd Qu.:10  
+##  Max.   : 342.679   Max.   : 2.956870   Max.   :10  
+##                     NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2278,7 +2269,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are fantastic!"
+## [1] "You are classy!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -4324,7 +4315,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5870986
+## [1] 0.5167001
 \end{verbatim}
 
 \webexunhide
@@ -4674,70 +4665,5 @@ Terminal command:
 \begin{verbatim}
 sudo apt install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 \end{verbatim}
-
-\section{Course Exam}\label{course-exam}
-
-The course ends with a little exam on campus. Please look at your timetable on Canvas for time and location. The exam consist of data analysis tasks that you have to do. The exam will be graded.
-
-\subsection*{Examination procedure}\label{examination-procedure}
-\addcontentsline{toc}{subsection}{Examination procedure}
-
-\begin{itemize}
-\tightlist
-\item
-  You can bring your \textbf{own laptop} and use it for the exam. In this case, please ensure that you have internet access on the Campus. Alternatively, you can \textbf{use one computer in the PC pool}. In this case, you might have a preference to use a particular computer. If so, please contact me or one of the invigilators at the beginning of the exam. Selecting a particular place might be beneficial, because using a computer that you have work with before ensures that you have your project with the package \texttt{tidyverse}s installed.
-\item
-  When the exam starts, you can download the exam sheet with the assignments via \textbf{Canvas}.
-\item
-  Enter all your responses to the assignments in one single \emph{R}-script. Check out the \textbf{practice exam} on Canvas to get an impression how an exam and an ideal response \emph{R}-script could look like.
-\item
-  You have \textbf{3 hours} time to do this and to \textbf{upload your script to Canvas}. Please note that there is a strict deadline of 3 hours and you can not upload your script afterwards.
-\item
-  During the exam, an invigilator will come by and carry out an identity check. To do this, have your ID, driver's license, residence permit or possibly a physical student card ready on the top left corner of your table.
-\end{itemize}
-
-\subsection*{What is allowed and what is considered fraud?}\label{what-is-allowed-and-what-is-considered-fraud}
-\addcontentsline{toc}{subsection}{What is allowed and what is considered fraud?}
-
-\subsubsection*{Permitted Resources (Open-Book \& Search)}\label{permitted-resources-open-book-search}
-\addcontentsline{toc}{subsubsection}{Permitted Resources (Open-Book \& Search)}
-
-\begin{itemize}
-\tightlist
-\item
-  You are allowed to bring and use your own laptop.
-\item
-  You are allowed to use any materials stored locally on your computer (notes, previous scripts), however see points 2 and 3 below.
-\item
-  You are allowed to use the internet for \textbf{searching documentation and troubleshooting syntax}.
-\item
-  To ensure fairness and avoid AI-generated shortcuts, you are only permitted to use \href{https://www.startpage.com}{Startpage.com} as your search engine. Startpage provides standard search results without integrated AI-generative summaries.
-\end{itemize}
-
-\subsubsection*{Strict Prohibition of AI and LLMs}\label{strict-prohibition-of-ai-and-llms}
-\addcontentsline{toc}{subsubsection}{Strict Prohibition of AI and LLMs}
-
-\begin{itemize}
-\tightlist
-\item
-  The use of \textbf{Generative AI or Large Language Models} (LLMs)---including but not limited to ChatGPT, Gemini, Claude, or GitHub Copilot---is \textbf{strictly prohibited}.
-\item
-  For the exam, using AI to generate code logic, explain exam questions, or debug your script will be considered a serious attempt at fraud.
-\item
-  Proctoring: Invigilators will perform ``screen sweeps.'' If an AI interface (chat bubbles, ``Generate'' buttons, or the characteristic scrolling text of an LLM) is visible on your screen, it will be flagged immediately.
-\end{itemize}
-
-\subsubsection*{Communication and Collaboration}\label{communication-and-collaboration}
-\addcontentsline{toc}{subsubsection}{Communication and Collaboration}
-
-\begin{itemize}
-\tightlist
-\item
-  It is not allowed to directly ask others for help, to exchange any code, or to communicate with someone online.
-\item
-  Any usage of emails, chat clients/websites (e.g., Discord, WhatsApp), or the posting of new questions in online forums/newsgroups will be considered an attempt at fraud.
-\item
-  The use of mobile phones is strictly prohibited. They must be completely switched off and put away during the exam.
-\end{itemize}
 
 \end{document}
