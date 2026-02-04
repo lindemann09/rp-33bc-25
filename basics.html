@@ -326,8 +326,8 @@ objects in <em>R</em>.
 <p>All variables are sorted in the data workspace or environment. In RStudio, you can find the current content of the workspace with all variables the right top panel called “environment”.</p>
 <p>Alternatively, the command <code>ls()</code> lists all objects variables in the R console.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="basics.html#cb10-1" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;a&quot;              &quot;b&quot;              &quot;hide&quot;           &quot;is_latex&quot;      
-## [5] &quot;third_variable&quot; &quot;unhide&quot;</code></pre>
+<pre><code>## [1] &quot;a&quot;              &quot;b&quot;              &quot;data_folder&quot;    &quot;hide&quot;          
+## [5] &quot;is_latex&quot;       &quot;third_variable&quot; &quot;unhide&quot;</code></pre>
 </div>
 <div id="assign" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Equal Sign Assignments (<code>=</code>)<a href="basics.html#assign" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -566,11 +566,11 @@ Solution
 <p>In the arguments section, there are explanations for each of the arguments. <code>n</code> is the number of random numbers we want to create, <code>mean</code> is the mean of the data points we will create and <code>sd</code> is the standard deviation of the set. In the details section it notes that if no values are entered for <code>mean</code> and <code>sd</code> it will use a default of 0 and 1 for these values. Because there is no default value for <code>n</code> it must be specified otherwise the code won’t run.</p>
 <p>Let’s try an example and just change the required argument <code>n</code> to ask <em>R</em> to produce 5 random numbers.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="basics.html#cb48-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1] -0.6047852  0.8156679  0.8885746  0.3775094  0.2149026</code></pre>
+<pre><code>## [1] -0.1585186  0.8358336  0.2953324  0.6842351  0.1361854</code></pre>
 <p>The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different ‘’random’’ numbers.</p>
 <p>Now we can change the additional arguments to produce a different set of numbers.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="basics.html#cb50-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## [1]  95.81386 110.79453  85.73135  74.40761 109.18216</code></pre>
+<pre><code>## [1]  88.90785  89.07959  98.40808 150.65993  77.14056</code></pre>
 <p>This time <em>R</em> has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.</p>
 </div>
 <div id="argument-names" class="section level3 hasAnchor" number="4.6.4">
