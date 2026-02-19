@@ -23,7 +23,7 @@
 <meta name="author" content="Oliver Lindemann" />
 
 
-<meta name="date" content="2026-02-04" />
+<meta name="date" content="2026-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -351,11 +351,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Random numbers sequences are very useful to illustrate probabilistic phenomena in statistics and are required in psychology for mathematical modelling and simulations. <em>R</em> can generate random numbers from different probability functions.</p>
 <p>Drawing random numbers from a normal distribution has already been discussed in section <a href="basics.html#examplernorm">4.6.3</a>. The function <code>runif()</code> is used draw random numbers from a uniform distribution:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="vectors.html#cb74-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>)                     <span class="co"># 10 random numbers between 0 and 1</span></span></code></pre></div>
-<pre><code>##  [1] 0.7329804 0.9290094 0.0126717 0.3571955 0.3135970 0.7819927 0.2832584
-##  [8] 0.8568164 0.6336501 0.9102294</code></pre>
+<pre><code>##  [1] 0.4560271 0.2771524 0.2128625 0.8201291 0.1501088 0.4153156 0.1207809
+##  [8] 0.8792258 0.5570138 0.8332597</code></pre>
 <div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="vectors.html#cb76-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min=</span> <span class="dv">10</span>, <span class="at">max =</span> <span class="dv">99</span>)  <span class="co"># 10 random numbers between 10 and 99</span></span></code></pre></div>
-<pre><code>##  [1] 94.08518 98.16989 55.93203 65.44089 86.09031 77.92131 26.73627 19.03979
-##  [9] 51.56278 34.63209</code></pre>
+<pre><code>##  [1] 94.58643 20.43308 97.93060 94.19930 46.41291 64.56191 64.18670 62.31552
+##  [9] 81.75957 83.12447</code></pre>
 <div class="geek">
 <p>
 More information about random number generation and the probability
