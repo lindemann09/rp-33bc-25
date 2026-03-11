@@ -977,7 +977,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.11885403  1.10430962  0.38617068  0.06327494  0.90267622
+## [1] -1.27600163 -0.66042078 -0.06013003  0.29628625 -0.05169116
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -991,7 +991,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  98.90107 105.66864 100.94380  82.77922 107.42344
+## [1] 142.4268 118.4611 112.7256  89.0747 101.7489
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1236,8 +1236,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.2683991 0.3279246 0.2331160 0.2712943 0.7942707 0.9611980 0.3055449
-##  [8] 0.5274733 0.4099064 0.9090439
+##  [1] 0.31480837 0.49783113 0.79770495 0.38791279 0.88874049 0.01087095
+##  [7] 0.49656997 0.42957652 0.59324130 0.57948685
 \end{verbatim}
 
 \begin{Shaded}
@@ -1247,8 +1247,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 18.49858 33.95623 43.65169 50.76933 94.60801 71.15394 68.15834 14.67304
-##  [9] 73.58361 40.37355
+##  [1] 93.71368 25.97096 85.77045 76.40358 93.04791 31.20495 14.18775 16.95583
+##  [9] 96.53369 80.25476
 \end{verbatim}
 
 \begin{geek}
@@ -1935,14 +1935,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a        variable_b         variable_c
-##  Min.   :-277.58   Min.   :-3.20918   Min.   :10  
-##  1st Qu.: -10.11   1st Qu.:-0.77223   1st Qu.:10  
-##  Median :  44.64   Median :-0.01099   Median :10  
-##  Mean   :  52.93   Mean   :-0.06382   Mean   :10  
-##  3rd Qu.: 129.85   3rd Qu.: 0.66580   3rd Qu.:10  
-##  Max.   : 344.28   Max.   : 2.35296   Max.   :10  
-##                    NA's   :131
+##    variable_a         variable_b         variable_c
+##  Min.   :-284.266   Min.   :-1.96524   Min.   :10  
+##  1st Qu.:   0.537   1st Qu.:-0.61278   1st Qu.:10  
+##  Median :  62.956   Median :-0.11913   Median :10  
+##  Mean   :  64.582   Mean   : 0.07198   Mean   :10  
+##  3rd Qu.: 131.063   3rd Qu.: 0.92224   3rd Qu.:10  
+##  Max.   : 380.255   Max.   : 2.57482   Max.   :10  
+##                     NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2061,7 +2061,7 @@ If you omit one of the indices \emph{R} takes all rows or columns of the omitted
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{df[, }\DecValTok{2}\NormalTok{]    }\CommentTok{\# all rows of column 2}
-\NormalTok{df[}\DecValTok{4}\NormalTok{, ]    }\CommentTok{\# all columns of row 2 and 4}
+\NormalTok{df[}\DecValTok{4}\NormalTok{, ]    }\CommentTok{\# all columns of row 4}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2269,7 +2269,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are peachy!"
+## [1] "You are dazzling!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -4315,7 +4315,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5855211
+## [1] 0.6128508
 \end{verbatim}
 
 \webexunhide

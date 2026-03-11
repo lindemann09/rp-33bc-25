@@ -351,11 +351,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Random numbers sequences are very useful to illustrate probabilistic phenomena in statistics and are required in psychology for mathematical modelling and simulations. <em>R</em> can generate random numbers from different probability functions.</p>
 <p>Drawing random numbers from a normal distribution has already been discussed in section <a href="basics.html#examplernorm">4.6.3</a>. The function <code>runif()</code> is used draw random numbers from a uniform distribution:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="vectors.html#cb74-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>)                     <span class="co"># 10 random numbers between 0 and 1</span></span></code></pre></div>
-<pre><code>##  [1] 0.28272245 0.35515068 0.04065668 0.55580577 0.77274637 0.86906939
-##  [7] 0.61366772 0.67994567 0.53862455 0.12923331</code></pre>
+<pre><code>##  [1] 0.5246390 0.5554321 0.4780478 0.7872482 0.1008209 0.7888584 0.6737909
+##  [8] 0.7118030 0.1671276 0.8074640</code></pre>
 <div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="vectors.html#cb76-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min=</span> <span class="dv">10</span>, <span class="at">max =</span> <span class="dv">99</span>)  <span class="co"># 10 random numbers between 10 and 99</span></span></code></pre></div>
-<pre><code>##  [1] 19.13984 57.28647 66.98562 93.91285 30.90065 50.84551 97.07984 47.27108
-##  [9] 76.84121 81.76637</code></pre>
+<pre><code>##  [1] 24.15778 78.70481 72.08681 30.71349 54.52676 64.50938 21.79085 74.08032
+##  [9] 73.21452 56.25345</code></pre>
 <div class="geek">
 <p>
 More information about random number generation and the probability
