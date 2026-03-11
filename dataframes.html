@@ -391,14 +391,14 @@ strange in this dataset?
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="dataframes.html#cb146-1" tabindex="-1"></a><span class="fu">nrow</span>(demo_data)</span></code></pre></div>
 <pre><code>## [1] 200</code></pre>
 <div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="dataframes.html#cb148-1" tabindex="-1"></a><span class="fu">summary</span>(demo_data)</span></code></pre></div>
-<pre><code>##    variable_a        variable_b         variable_c
-##  Min.   :-152.70   Min.   :-3.06633   Min.   :10  
-##  1st Qu.:  -2.94   1st Qu.:-0.78727   1st Qu.:10  
-##  Median :  77.44   Median : 0.09263   Median :10  
-##  Mean   :  73.06   Mean   : 0.05963   Mean   :10  
-##  3rd Qu.: 144.14   3rd Qu.: 0.87830   3rd Qu.:10  
-##  Max.   : 354.61   Max.   : 2.31667   Max.   :10  
-##                    NA&#39;s   :131</code></pre>
+<pre><code>##    variable_a          variable_b         variable_c
+##  Min.   :-194.2159   Min.   :-2.07978   Min.   :10  
+##  1st Qu.:   0.2262   1st Qu.:-0.48230   1st Qu.:10  
+##  Median :  70.8887   Median : 0.06949   Median :10  
+##  Mean   :  70.1987   Mean   : 0.08210   Mean   :10  
+##  3rd Qu.: 138.2172   3rd Qu.: 0.75005   3rd Qu.:10  
+##  Max.   : 306.7451   Max.   : 2.65381   Max.   :10  
+##                      NA&#39;s   :131</code></pre>
 <div class="webex-solution">
 <button>
 Solution
@@ -497,8 +497,8 @@ Solution
 <p>Cells in an data frame can be also access via row and column indices and the <code>[]</code> operator. The syntax looks like this: <code>[row_index, column_index]</code>.</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="dataframes.html#cb159-1" tabindex="-1"></a><span class="co"># Check what you get</span></span>
 <span id="cb159-2"><a href="dataframes.html#cb159-2" tabindex="-1"></a>df[<span class="dv">1</span>, <span class="dv">3</span>]             <span class="co"># returns from the 1st row the column 3</span></span>
-<span id="cb159-3"><a href="dataframes.html#cb159-3" tabindex="-1"></a>df[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">3</span>]           <span class="co"># returns from row 2-4 the column 2</span></span>
-<span id="cb159-4"><a href="dataframes.html#cb159-4" tabindex="-1"></a>df[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)]  <span class="co"># returns from row 1 and 4 the column 2 and 3</span></span></code></pre></div>
+<span id="cb159-3"><a href="dataframes.html#cb159-3" tabindex="-1"></a>df[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">3</span>]           <span class="co"># returns from row 2-4 the column 3</span></span>
+<span id="cb159-4"><a href="dataframes.html#cb159-4" tabindex="-1"></a>df[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)]  <span class="co"># returns from row 1 and 4 of the columns 2 and 3</span></span></code></pre></div>
 <p>If you omit one of the indices <em>R</em> takes all rows or columns of the omitted index.</p>
 <div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="dataframes.html#cb160-1" tabindex="-1"></a>df[, <span class="dv">2</span>]    <span class="co"># all rows of column 2</span></span>
 <span id="cb160-2"><a href="dataframes.html#cb160-2" tabindex="-1"></a>df[<span class="dv">4</span>, ]    <span class="co"># all columns of row 2 and 4</span></span></code></pre></div>

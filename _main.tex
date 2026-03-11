@@ -977,7 +977,7 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.91129931 -0.65677905 -0.02677908  0.51618784  0.91739619
+## [1] -0.11885403  1.10430962  0.38617068  0.06327494  0.90267622
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
@@ -991,7 +991,7 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 100.48355 100.70533  79.97460  84.28881  96.67366
+## [1]  98.90107 105.66864 100.94380  82.77922 107.42344
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
@@ -1236,8 +1236,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.6965959 0.0282802 0.5510363 0.3115650 0.9859480 0.6161989 0.2809892
-##  [8] 0.6079553 0.7896244 0.7452975
+##  [1] 0.2683991 0.3279246 0.2331160 0.2712943 0.7942707 0.9611980 0.3055449
+##  [8] 0.5274733 0.4099064 0.9090439
 \end{verbatim}
 
 \begin{Shaded}
@@ -1247,8 +1247,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 61.43597 43.67422 72.66640 85.19433 67.00867 30.08391 62.70259 12.18210
-##  [9] 87.35455 50.72942
+##  [1] 18.49858 33.95623 43.65169 50.76933 94.60801 71.15394 68.15834 14.67304
+##  [9] 73.58361 40.37355
 \end{verbatim}
 
 \begin{geek}
@@ -1936,12 +1936,12 @@ in this dataset?
 
 \begin{verbatim}
 ##    variable_a        variable_b         variable_c
-##  Min.   :-213.56   Min.   :-2.37876   Min.   :10  
-##  1st Qu.:  14.44   1st Qu.:-0.72801   1st Qu.:10  
-##  Median :  81.29   Median :-0.06440   Median :10  
-##  Mean   :  79.71   Mean   :-0.07176   Mean   :10  
-##  3rd Qu.: 151.03   3rd Qu.: 0.50092   3rd Qu.:10  
-##  Max.   : 386.57   Max.   : 2.57154   Max.   :10  
+##  Min.   :-277.58   Min.   :-3.20918   Min.   :10  
+##  1st Qu.: -10.11   1st Qu.:-0.77223   1st Qu.:10  
+##  Median :  44.64   Median :-0.01099   Median :10  
+##  Mean   :  52.93   Mean   :-0.06382   Mean   :10  
+##  3rd Qu.: 129.85   3rd Qu.: 0.66580   3rd Qu.:10  
+##  Max.   : 344.28   Max.   : 2.35296   Max.   :10  
 ##                    NA's   :131
 \end{verbatim}
 
@@ -2051,8 +2051,8 @@ Cells in an data frame can be also access via row and column indices and the \te
 \begin{Highlighting}[]
 \CommentTok{\# Check what you get}
 \NormalTok{df[}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{]             }\CommentTok{\# returns from the 1st row the column 3}
-\NormalTok{df[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{]           }\CommentTok{\# returns from row 2{-}4 the column 2}
-\NormalTok{df[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{), }\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)]  }\CommentTok{\# returns from row 1 and 4 the column 2 and 3}
+\NormalTok{df[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{]           }\CommentTok{\# returns from row 2{-}4 the column 3}
+\NormalTok{df[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{), }\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)]  }\CommentTok{\# returns from row 1 and 4 of the columns 2 and 3}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2269,7 +2269,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are excellent!"
+## [1] "You are peachy!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -2474,13 +2474,13 @@ As with all \emph{R} -packages, if you want to make use of it in yours scripts, 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching core tidyverse packages ------------------------------------------------------------- tidyverse 2.0.0 --
+## -- Attaching core tidyverse packages --------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
 ## v dplyr     1.1.4     v readr     2.1.5
 ## v forcats   1.0.0     v stringr   1.5.1
 ## v ggplot2   3.5.2     v tibble    3.2.1
 ## v lubridate 1.9.4     v tidyr     1.3.1
 ## v purrr     1.0.4     
-## -- Conflicts ------------------------------------------------------------------------------- tidyverse_conflicts() --
+## -- Conflicts --------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
@@ -4315,7 +4315,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.6420456
+## [1] 0.5855211
 \end{verbatim}
 
 \webexunhide
