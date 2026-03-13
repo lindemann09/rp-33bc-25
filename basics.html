@@ -524,7 +524,7 @@ Solution
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="basics.html#cb33-1" tabindex="-1"></a><span class="co"># b is a string, but it will be converted to a number (by the function</span></span>
 <span id="cb33-2"><a href="basics.html#cb33-2" tabindex="-1"></a><span class="co"># as.numeric). Multiplying two number is, of course, a valid operation.</span></span></code></pre></div>
 </div>
-<p>rite the R code for the following equation:</p>
+<p>Write the R code for the following equation:</p>
 </div>
 </div>
 <div id="comparing" class="section level2 hasAnchor" number="4.5">
@@ -661,7 +661,7 @@ specified otherwise the code won’t run.</p>
 <p>Let’s try an example and just change the required argument <code>n</code> to ask
 <em>R</em> to produce 5 random numbers.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="basics.html#cb48-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1] 0.5441182 0.4911221 0.8112814 0.9867317 0.1373393</code></pre>
+<pre><code>## [1]  2.14728381 -0.08029856  0.50430951  0.74841675 -0.27713607</code></pre>
 <p>The random numbers have a mean of 0 and an SD of 1. Of course, since
 this are random numbers, you have probably got different numbers. Run
 the function again and you will see that you get each time different
@@ -669,7 +669,7 @@ the function again and you will see that you get each time different
 <p>Now we can change the additional arguments to produce a different set of
 numbers.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="basics.html#cb50-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## [1]  94.08820 129.54414 117.87174 108.81208  83.29531</code></pre>
+<pre><code>## [1]  87.67689 102.17916 118.27240  63.42829  94.93088</code></pre>
 <p>This time <em>R</em> has still produced 5 random numbers, but now this set of
 numbers has a mean of 100 and a standard deviation of 15 as specified
 (this is the distribution of the scores in many IQ tests). Always
