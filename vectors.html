@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Atomic Vectors | Data Processing and Analysis in R (2025/26)</title>
   <meta name="description" content="5 Atomic Vectors | Data Processing and Analysis in R (2025/26)" />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Atomic Vectors | Data Processing and Analysis in R (2025/26)" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Oliver Lindemann" />
 
 
-<meta name="date" content="2026-03-11" />
+<meta name="date" content="2026-03-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -351,11 +351,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Random numbers sequences are very useful to illustrate probabilistic phenomena in statistics and are required in psychology for mathematical modelling and simulations. <em>R</em> can generate random numbers from different probability functions.</p>
 <p>Drawing random numbers from a normal distribution has already been discussed in section <a href="basics.html#examplernorm">4.6.3</a>. The function <code>runif()</code> is used draw random numbers from a uniform distribution:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="vectors.html#cb74-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>)                     <span class="co"># 10 random numbers between 0 and 1</span></span></code></pre></div>
-<pre><code>##  [1] 0.6687799189 0.5713818411 0.0003761454 0.9185912090 0.2880280840
-##  [6] 0.4909128286 0.0114347849 0.4244774245 0.3011446921 0.9197327951</code></pre>
+<pre><code>##  [1] 0.33420346 0.02992102 0.58629782 0.06876285 0.24667168 0.26645667
+##  [7] 0.96630260 0.77357570 0.11654044 0.44347835</code></pre>
 <div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="vectors.html#cb76-1" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min=</span> <span class="dv">10</span>, <span class="at">max =</span> <span class="dv">99</span>)  <span class="co"># 10 random numbers between 10 and 99</span></span></code></pre></div>
-<pre><code>##  [1] 19.76244 27.87669 39.49816 46.49058 38.55307 50.07456 89.28891 29.80900
-##  [9] 64.35493 98.33707</code></pre>
+<pre><code>##  [1] 60.67508 39.04827 81.43714 34.86441 52.29118 53.40384 84.89003 54.10534
+##  [9] 58.68135 41.81241</code></pre>
 <div class="geek">
 <p>
 More information about random number generation and the probability

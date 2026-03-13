@@ -213,7 +213,7 @@
 
 \title{Data Processing and Analysis in \emph{R} (2025/26)}
 \author{Oliver Lindemann}
-\date{2026-03-11}
+\date{2026-03-13}
 
 \begin{document}
 \maketitle
@@ -478,13 +478,24 @@ Why should I use projects? When working with \emph{R}, you are running your prog
 
 \section{Basics of Programming in R}\label{basics}
 
-Learning to work with \emph{R} requires a little knowledge about basic concepts of computer programming. This is maybe a bit technical at the beginning. However, having an insight in this basics makes it later much easy to deal with real data analysis in \emph{R} later.
+Learning to work with \emph{R} requires a little knowledge about basic
+concepts of computer programming. This is maybe a bit technical at the
+beginning. However, having an insight in this basics makes it later much
+easy to deal with real data analysis in \emph{R} later.
 
-Thus, the section covers the basics of the \emph{R} programming language. If you are already familiar with any another programming language, I guess these things are not new for you.
+Thus, the section covers the basics of the \emph{R} programming language. If
+you are already familiar with any another programming language, I guess
+these things are not new for you.
 
 \subsection{Comments in Program Code}\label{comments-in-program-code}
 
-Before we have a look at the first \emph{R} code examples, you should know that \emph{R} ignores everything that follows a hashtag \texttt{\#}. That is, text after a \texttt{\#} will not be executed. Hashtags are used to add comments to \emph{R}-code. The comments help to document and explains the code and make it thus more readable for humans. Comments in \emph{R} code are printed in italic font and a different color by \emph{RStudio} (and in the manual). See this example:
+Before we have a look at the first \emph{R} code examples, you should know
+that \emph{R} ignores everything that follows a hashtag \texttt{\#}. That is, text
+after a \texttt{\#} will not be executed. Hashtags are used to add comments to
+\emph{R}-code. The comments help to document and explains the code and make
+it thus more readable for humans. Comments in \emph{R} code are printed in
+italic font and a different color by \emph{RStudio} (and in the manual). See
+this example:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -493,7 +504,8 @@ Before we have a look at the first \emph{R} code examples, you should know that 
 \end{Highlighting}
 \end{Shaded}
 
-That is, if you try out the code examples, you can simple ignore the comment.
+That is, if you try out the code examples, you can simple ignore the
+comment.
 
 \begin{important}
 If you later develop your own analyses scripts in \emph{R}, it is
@@ -505,7 +517,8 @@ codes works.
 
 \subsection{Variables and Objects}\label{variables-and-objects}
 
-Everything that is stored in \emph{R} is called an \textbf{object}. The most basic example for an object is an numerical \textbf{variable}. For instance,
+Everything that is stored in \emph{R} is called an \textbf{object}. The most basic
+example for an object is an numerical \textbf{variable}. For instance,
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -515,8 +528,10 @@ Everything that is stored in \emph{R} is called an \textbf{object}. The most bas
 \end{Highlighting}
 \end{Shaded}
 
-In this example, the numerical \texttt{9}, \texttt{2724.54} and \texttt{71} are stored in the variables with the names \texttt{a}, \texttt{b} and \texttt{third\_variable}.
-If you want to print out the content of a certain object or variable, you can use the \texttt{print()}-command together with the variable.
+In this example, the numerical \texttt{9}, \texttt{2724.54} and \texttt{71} are stored in the
+variables with the names \texttt{a}, \texttt{b} and \texttt{third\_variable}. If you want to
+print out the content of a certain object or variable, you can use the
+\texttt{print()}-command together with the variable.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -547,9 +562,12 @@ This \href{https://vimeo.com/220493412}{video} also explains objects in
 
 \subsubsection{Variable Environment}\label{variable-environment}
 
-All variables are sorted in the data workspace or environment. In RStudio, you can find the current content of the workspace with all variables the right top panel called ``environment''.
+All variables are sorted in the data workspace or environment. In
+RStudio, you can find the current content of the workspace with all
+variables the right top panel called ``environment''.
 
-Alternatively, the command \texttt{ls()} lists all objects variables in the R console.
+Alternatively, the command \texttt{ls()} lists all objects variables in the R
+console.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -564,9 +582,12 @@ Alternatively, the command \texttt{ls()} lists all objects variables in the R co
 
 \subsubsection{\texorpdfstring{Equal Sign Assignments (\texttt{=})}{Equal Sign Assignments (=)}}\label{assign}
 
-As you have see above, to assign a value to an object (i.e., variable) with the left arrow \texttt{\textless{}-}. In RStudio, the shortcut \texttt{alt\ \&\ -} is very handy for quickly typing this sign. Check it out.
+As you have see above, to assign a value to an object (i.e., variable)
+with the left arrow \texttt{\textless{}-}. In RStudio, the shortcut \texttt{alt\ \&\ -} is very
+handy for quickly typing this sign. Check it out.
 
-Instead of typing an left arrow \texttt{\textless{}-} you can use the equal sign \texttt{=}. This two comments have the identical effect:
+Instead of typing an left arrow \texttt{\textless{}-} you can use the equal sign \texttt{=}.
+This two comments have the identical effect:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -575,15 +596,26 @@ Instead of typing an left arrow \texttt{\textless{}-} you can use the equal sign
 \end{Highlighting}
 \end{Shaded}
 
-Many data scientists find the equal-sign syntax easier to type and more natural to read. If you also prefer using \texttt{=} instead of \texttt{\textless{}-}, just do it. It's not a problem.
+Many data scientists find the equal-sign syntax easier to type and more
+natural to read. If you also prefer using \texttt{=} instead of \texttt{\textless{}-}, just do
+it. It's not a problem.
 
-You just need to know, that the coding style guidelines in the \emph{R} community suggest to use the \texttt{\textless{}-} syntax. (see e.g.~\href{https://www.r-bloggers.com/why-do-we-use-arrow-as-an-assignment-operator/}{here} for reasons). Most examples and documentations that you find online use therefore the arrow as the assignment operator.
+You just need to know, that the coding style guidelines in the \emph{R}
+community suggest to use the \texttt{\textless{}-} syntax. (see e.g.
+\href{https://www.r-bloggers.com/why-do-we-use-arrow-as-an-assignment-operator/}{here}
+for reasons). Most examples and documentations that you find online use
+therefore the arrow as the assignment operator.
 
 To avoid any confusion, the current manual uses the \texttt{\textless{}-} operator .
 
 \subsubsection{Left and Right Hand Side Assignments}\label{left-and-right-hand-side-assignments}
 
-In \emph{R}, there are two different ways to assign a value to a variable; you can either assign from left to right or from right to left in R. That is, instead of using \texttt{\textless{}-} or \texttt{=}to assign a value to a variable (left-hand-side assignment), you can also work with so-called the right-hand-side assignments (\texttt{-\textgreater{}}). These comments illustrate the principle:
+In \emph{R}, there are two different ways to assign a value to a variable;
+you can either assign from left to right or from right to left in R.
+That is, instead of using \texttt{\textless{}-} or \texttt{=}to assign a value to a variable
+(left-hand-side assignment), you can also work with so-called the
+right-hand-side assignments (\texttt{-\textgreater{}}). These comments illustrate the
+principle:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -595,7 +627,10 @@ In \emph{R}, there are two different ways to assign a value to a variable; you c
 \end{Highlighting}
 \end{Shaded}
 
-Left-hand-side assignments are most common among users, because the are similar of what we are used to in mathematical equations. You will see later in the course (when working with \textbf{pipes}), why right-hand-side assignment can be very elegant and efficient for data science.
+Left-hand-side assignments are most common among users, because the are
+similar of what we are used to in mathematical equations. You will see
+later in the course (when working with \textbf{pipes}), why right-hand-side
+assignment can be very elegant and efficient for data science.
 
 \begin{myexercise}
 What happens in the command below? What are the changes variable
@@ -603,6 +638,7 @@ environment?
 
 \texttt{E\ =\ U\ =\ R\ =\ 2}
 \end{myexercise}
+
 \webexhide{Solution}
 
 \begin{Shaded}
@@ -618,7 +654,9 @@ environment?
 
 \subsection{Basic operations}\label{basic-operations}
 
-You use \emph{R} as a calculator and perform basic operations on numbers and variables numbers. Just enter the following examples the console and check the results:
+You use \emph{R} as a calculator and perform basic operations on numbers and
+variables numbers. Just enter the following examples the console and
+check the results:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -632,7 +670,8 @@ You use \emph{R} as a calculator and perform basic operations on numbers and var
 \end{Highlighting}
 \end{Shaded}
 
-Of course, the result of a calculations can be stored in new variables, for instance:
+Of course, the result of a calculations can be stored in new variables,
+for instance:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -645,7 +684,9 @@ Of course, the result of a calculations can be stored in new variables, for inst
 ## [1] 63
 \end{verbatim}
 
-Look at the following example, which increases the value of the variable \texttt{x} by 1. To do so, it stores the result of the operation \texttt{x\ +\ 1} again in \texttt{x}:
+Look at the following example, which increases the value of the variable
+\texttt{x} by 1. To do so, it stores the result of the operation \texttt{x\ +\ 1} again
+in \texttt{x}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -685,7 +726,8 @@ circle, what is \texttt{x} ?
 
 \subsubsection{Character}\label{character}
 
-Besides numeric values as in the example above, \emph{R} can store text (called \texttt{character}) in variables.
+Besides numeric values as in the example above, \emph{R} can store text
+(called \texttt{character}) in variables.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -693,10 +735,12 @@ Besides numeric values as in the example above, \emph{R} can store text (called 
 \end{Highlighting}
 \end{Shaded}
 
-You can see the new variable in the current workspace (see `'environment'\,'-panel).
+You can see the new variable in the current workspace (see
+`'environment'\,'-panel).
 
-Certain operations can be only performed with certain data types. For instance,
-it does not make sense to substract or add to text string, right? See what happens:
+Certain operations can be only performed with certain data types. For
+instance, it does not make sense to substract or add to text string,
+right? See what happens:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -715,7 +759,8 @@ it does not make sense to substract or add to text string, right? See what happe
 ## Error in a + b : non-numeric argument to binary operator
 \end{verbatim}
 
-If you want to concatenate two strings you have to use the function \texttt{paste}:
+If you want to concatenate two strings you have to use the function
+\texttt{paste}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -744,14 +789,20 @@ type. Function that convert data types start in \emph{R} with
 
 \subsubsection{Logicals}\label{logicals}
 
-Another often reoccurring data type is call \emph{logical} (in other programming languages it's other call \emph{boolean}). A logical can be only \texttt{TRUE} or \texttt{FALSE} (typed in capitals without quotation marks); it is in other words a binary variable.
+Another often reoccurring data type is call \emph{logical} (in other
+programming languages it's other call \emph{boolean}). A logical can be only
+\texttt{TRUE} or \texttt{FALSE} (typed in capitals without quotation marks); it is in
+other words a binary variable.
 
-Logicals are very important, because are returned by \emph{R} if you make a comparison of the numbers (see section \ref{comparing}.)
+Logicals are very important, because are returned by \emph{R} if you make a
+comparison of the numbers (see section \ref{comparing}.)
 
 \paragraph*{\texorpdfstring{Negation: \texttt{!}}{Negation: !}}\label{negation}
 \addcontentsline{toc}{paragraph}{Negation: \texttt{!}}
 
-In \emph{R}, \texttt{!} is used for the negation of logicals and reads like ``\emph{is not}''. It converts, in other words, a \texttt{TRUE} to \texttt{FALSE} and \texttt{FALSE} to \texttt{TRUE}:
+In \emph{R}, \texttt{!} is used for the negation of logicals and reads like ``\emph{is
+not}''. It converts, in other words, a \texttt{TRUE} to \texttt{FALSE} and \texttt{FALSE} to
+\texttt{TRUE}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -775,7 +826,9 @@ In \emph{R}, \texttt{!} is used for the negation of logicals and reads like ``\e
 
 \subsubsection{Combining different data types}\label{comparediffdata}
 
-Please note, that you can preform the same operation that not combing a numerical and text variable is, of course, not possible. Try what happens if you type:
+Please note, that you can preform the same operation that not combing a
+numerical and text variable is, of course, not possible. Try what
+happens if you type:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -785,13 +838,16 @@ Please note, that you can preform the same operation that not combing a numerica
 \end{Highlighting}
 \end{Shaded}
 
-The third line results in an error, because \texttt{a} is a number and \texttt{b} is a text object. Combining this different data types is not possible, because \emph{R} does not know what to do.
+The third line results in an error, because \texttt{a} is a number and \texttt{b} is a
+text object. Combining this different data types is not possible,
+because \emph{R} does not know what to do.
 
 \begin{myexercise}
 Why does this work?
 
 \texttt{a\ *\ as.numeric(b)}
 \end{myexercise}
+
 \webexhide{Solution}
 
 \begin{Shaded}
@@ -833,11 +889,17 @@ Further comparisons are:
 \end{Highlighting}
 \end{Shaded}
 
-Note that \emph{R} needs two equal signs \texttt{==} for an `'is-equal-comparison'\,'. One equal sign is interpreted by \emph{R} as an assignment, similar to \texttt{\textless{}-} (see section \ref{assign}).
+Note that \emph{R} needs two equal signs \texttt{==} for an `'is-equal-comparison'\,'.
+One equal sign is interpreted by \emph{R} as an assignment, similar to \texttt{\textless{}-}
+(see section \ref{assign}).
 
 \subsection{Functions}\label{functions}
 
-As other programming languages, \emph{R} has \textbf{functions} to perform a specific tasks in a program, for instance, to process or manipulate data. A function ``returns'' a results of the command or the processing. For instance, the function \texttt{ls()} lists current variables in the workspace.
+As other programming languages, \emph{R} has \textbf{functions} to perform a
+specific tasks in a program, for instance, to process or manipulate
+data. A function ``returns'' a results of the command or the processing.
+For instance, the function \texttt{ls()} lists current variables in the
+workspace.
 
 \begin{important}
 To execute a function, you always have call the function name
@@ -850,7 +912,9 @@ the function name.)
 
 \subsubsection{Arguments}\label{arguments}
 
-Often, functions take one or more arguments. The arguments are for instance data to be processed or certain information that are required to execute the task. For instance,
+Often, functions take one or more arguments. The arguments are for
+instance data to be processed or certain information that are required
+to execute the task. For instance,
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -862,7 +926,10 @@ Often, functions take one or more arguments. The arguments are for instance data
 ## [1] 4.158883
 \end{verbatim}
 
-returns the logarithm natural of 13, \(\log_e(13)\), and prints it out in the RStudio console. You can also save the result directly in another variable, because you want to do some further processing later with it or you can combine functions. For example:
+returns the logarithm natural of 13, \(\log_e(13)\), and prints it out in
+the RStudio console. You can also save the result directly in another
+variable, because you want to do some further processing later with it
+or you can combine functions. For example:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -875,7 +942,8 @@ returns the logarithm natural of 13, \(\log_e(13)\), and prints it out in the RS
 functions in \emph{R}.}
 \end{simple}
 
-You can also feed the result of a function directly into another function. For example:
+You can also feed the result of a function directly into another
+function. For example:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -883,7 +951,9 @@ You can also feed the result of a function directly into another function. For e
 \end{Highlighting}
 \end{Shaded}
 
-\texttt{sqrt()} is the command for the square root. This nesting of functions and expressions makes it the implement mathematical expression in \emph{R} very straightforward. For instance, is
+\texttt{sqrt()} is the command for the square root. This nesting of functions
+and expressions makes it the implement mathematical expression in \emph{R}
+very straightforward. For instance, is
 
 \begin{myexercise}
 Write the R code for the following equation:
@@ -894,18 +964,22 @@ Hint: \texttt{sin()} is function for sinus. The variable \texttt{pi} is
 always predefine in R, even if you can not see it in the environment
 panel.
 \end{myexercise}
+
 \webexhide{Solution}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(}\DecValTok{15}\SpecialCharTok{**}\FunctionTok{log}\NormalTok{(}\DecValTok{12}\NormalTok{) }\SpecialCharTok{/} \DecValTok{1} \SpecialCharTok{+} \FunctionTok{sin}\NormalTok{(}\FloatTok{4.5}\SpecialCharTok{*}\NormalTok{pi))}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(}\DecValTok{15}\SpecialCharTok{**}\NormalTok{(}\FunctionTok{log}\NormalTok{(}\DecValTok{12}\NormalTok{) }\SpecialCharTok{/}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{+} \FunctionTok{sin}\NormalTok{(}\FloatTok{4.5} \SpecialCharTok{*}\NormalTok{ pi))))}
 \CommentTok{\# Sorry, I know the example is not a very meaningful.}
 \end{Highlighting}
 \end{Shaded}
 
 \webexunhide
 
-Importantly: Functions expect a specific data type as argument. If the type of the argument is not correct, you will receive an error. For instance, the function \texttt{sin()} (the sinus) expects a number not a text string. Look what happens:
+Importantly: Functions expect a specific data type as argument. If the
+type of the argument is not correct, you will receive an error. For
+instance, the function \texttt{sin()} (the sinus) expects a number not a text
+string. Look what happens:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -916,9 +990,15 @@ Importantly: Functions expect a specific data type as argument. If the type of t
 
 \textbf{Required and optional arguments}
 
-Some arguments of functions are required (that is, you have to specify this them) and others are optional. Optional arguments will often use a default value (normally specified in the help documentation), if you do not enter any value.
+Some arguments of functions are required (that is, you have to specify
+this them) and others are optional. Optional arguments will often use a
+default value (normally specified in the help documentation), if you do
+not enter any value.
 
-For instance, if you just call \texttt{log(64)} you get the natural logarithm \(\log_e(64)\). If you want to have the logarithm to a different base, e.g.~\(\log_{2}\) or \(\log_{10}\), you have to specify the optional argument \texttt{base} of the \texttt{log} function:
+For instance, if you just call \texttt{log(64)} you get the natural logarithm
+\(\log_e(64)\). If you want to have the logarithm to a different base,
+e.g.~\(\log_{2}\) or \(\log_{10}\), you have to specify the optional
+argument \texttt{base} of the \texttt{log} function:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -942,11 +1022,20 @@ For instance, if you just call \texttt{log(64)} you get the natural logarithm \(
 
 \subsubsection{Built-in help for functions}\label{builtinhelp}
 
-\emph{R} provides hundreds functions. As you will see late in section \ref{packages}, you can install additional packages for specific tasks, which provide basically collections of extra functions. That is, the amount of functions that you can use in \emph{R} is almost endless.
+\emph{R} provides hundreds functions. As you will see late in section
+\ref{packages}, you can install additional packages for specific tasks,
+which provide basically collections of extra functions. That is, the
+amount of functions that you can use in \emph{R} is almost endless.
 
-But how do you know what a specific functions is doing and which arguments you can or have to define to use it correctly. Fortunately, \emph{R} has a \textbf{built-in help system}. You can look up all the arguments that a function takes by using the help documentation by using the format ``\texttt{?function}''.
+But how do you know what a specific functions is doing and which
+arguments you can or have to define to use it correctly. Fortunately,
+\emph{R} has a \textbf{built-in help system}. You can look up all the arguments
+that a function takes by using the help documentation by using the
+format ``\texttt{?function}''.
 
-As an example, let's look at the help documentation for the function \texttt{rnorm()} which randomly generates a set of numbers with a normal distribution.
+As an example, let's look at the help documentation for the function
+\texttt{rnorm()} which randomly generates a set of numbers with a normal
+distribution.
 
 \subsubsection{Example}\label{examplernorm}
 
@@ -958,7 +1047,9 @@ Display the documentation of the function \texttt{rnorm} by typing
 \end{Highlighting}
 \end{Shaded}
 
-The help documentation should appear in the bottom right panel. In the usage section of the documentation, we see that \texttt{rnorm()} takes the following form:
+The help documentation should appear in the bottom right panel. In the
+usage section of the documentation, we see that \texttt{rnorm()} takes the
+following form:
 
 \begin{itemize}
 \tightlist
@@ -966,9 +1057,16 @@ The help documentation should appear in the bottom right panel. In the usage sec
   \texttt{rnorm(n,\ mean\ =\ 0,\ sd\ =\ 1)}
 \end{itemize}
 
-In the arguments section, there are explanations for each of the arguments. \texttt{n} is the number of random numbers we want to create, \texttt{mean} is the mean of the data points we will create and \texttt{sd} is the standard deviation of the set. In the details section it notes that if no values are entered for \texttt{mean} and \texttt{sd} it will use a default of 0 and 1 for these values. Because there is no default value for \texttt{n} it must be specified otherwise the code won't run.
+In the arguments section, there are explanations for each of the
+arguments. \texttt{n} is the number of random numbers we want to create, \texttt{mean}
+is the mean of the data points we will create and \texttt{sd} is the standard
+deviation of the set. In the details section it notes that if no values
+are entered for \texttt{mean} and \texttt{sd} it will use a default of 0 and 1 for
+these values. Because there is no default value for \texttt{n} it must be
+specified otherwise the code won't run.
 
-Let's try an example and just change the required argument \texttt{n} to ask \emph{R} to produce 5 random numbers.
+Let's try an example and just change the required argument \texttt{n} to ask
+\emph{R} to produce 5 random numbers.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -977,12 +1075,16 @@ Let's try an example and just change the required argument \texttt{n} to ask \em
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.8180751 0.3520361 0.4068834 0.5679913 0.7666175
+## [1]  0.8034550  2.2330508  1.4140670 -0.6516600  0.5491716
 \end{verbatim}
 
-The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different `'random'\,' numbers.
+The random numbers have a mean of 0 and an SD of 1. Of course, since
+this are random numbers, you have probably got different numbers. Run
+the function again and you will see that you get each time different
+`'random'\,' numbers.
 
-Now we can change the additional arguments to produce a different set of numbers.
+Now we can change the additional arguments to produce a different set of
+numbers.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -991,14 +1093,23 @@ Now we can change the additional arguments to produce a different set of numbers
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 121.42334  76.94912 101.65517  94.95619  87.58206
+## [1]  92.63251  94.85275 104.96801 110.77977 104.28729
 \end{verbatim}
 
-This time \emph{R} has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.
+This time \emph{R} has still produced 5 random numbers, but now this set of
+numbers has a mean of 100 and a standard deviation of 15 as specified
+(this is the distribution of the scores in many IQ tests). Always
+remember to use the help documentation to help you understand what
+arguments a function requires.
 
 \subsubsection{Argument names}\label{argument-names}
 
-In the above examples, we have written out the argument names in our code (e.g., \texttt{n}, \texttt{mean}, \texttt{sd}), however, this is not strictly necessary. The following two lines of code would both produce the same result (although each time you run \texttt{rnorm()} it will produce a slightly different set of numbers, because it's random, but they would still have the same mean and SD):
+In the above examples, we have written out the argument names in our
+code (e.g., \texttt{n}, \texttt{mean}, \texttt{sd}), however, this is not strictly necessary.
+The following two lines of code would both produce the same result
+(although each time you run \texttt{rnorm()} it will produce a slightly
+different set of numbers, because it's random, but they would still have
+the same mean and SD):
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1007,9 +1118,13 @@ In the above examples, we have written out the argument names in our code (e.g.,
 \end{Highlighting}
 \end{Shaded}
 
-Importantly, if you do not write out the argument names, R will use the default order of arguments, that is for \texttt{rnorm} it will assume that the first number you enter is \texttt{n}. the second number is mean and the third number is \texttt{sd}.
+Importantly, if you do not write out the argument names, R will use the
+default order of arguments, that is for \texttt{rnorm} it will assume that the
+first number you enter is \texttt{n}. the second number is mean and the third
+number is \texttt{sd}.
 
-If you write out the argument names then you can write the arguments in whatever order you like:
+If you write out the argument names then you can write the arguments in
+whatever order you like:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1017,9 +1132,16 @@ If you write out the argument names then you can write the arguments in whatever
 \end{Highlighting}
 \end{Shaded}
 
-When you are first learning R, you may find it useful to write out the argument names as it can help you remember and understand what each part of the function is doing. However, as your skills progress you may find it quicker to omit the argument names and you will also see examples of code online that do not use argument names so it is important to be able to understand which argument each bit of code is referring to (or look up the help documentation to check).
+When you are first learning R, you may find it useful to write out the
+argument names as it can help you remember and understand what each part
+of the function is doing. However, as your skills progress you may find
+it quicker to omit the argument names and you will also see examples of
+code online that do not use argument names so it is important to be able
+to understand which argument each bit of code is referring to (or look
+up the help documentation to check).
 
-In this manual, I will mostly write out the argument names the first time , however, in subsequent uses they may be omitted.
+In this manual, I will mostly write out the argument names the first
+time , however, in subsequent uses they may be omitted.
 
 \begin{important}
 The assign a value to an named argument of the function, you have to use
@@ -1028,7 +1150,13 @@ the equal sign \texttt{=} and not \texttt{\textless{}-}.
 
 \subsubsection{Tab auto-complete}\label{tab-auto-complete}
 
-One very useful feature of R Studio is the tab auto-complete for functions (see Figure \ref{fig:autocomplete}). If you write the name of the function and then press the tab key, R Studio will show you the arguments that function takes along with a brief description. If you press enter on the argument name it will fill in the name for you, just like auto-complete on your phone. This is incredibly useful when you are first learning R and you should remember to use this feature frequently.
+One very useful feature of R Studio is the tab auto-complete for
+functions (see Figure \ref{fig:autocomplete}). If you write the name of
+the function and then press the tab key, R Studio will show you the
+arguments that function takes along with a brief description. If you
+press enter on the argument name it will fill in the name for you, just
+like auto-complete on your phone. This is incredibly useful when you are
+first learning R and you should remember to use this feature frequently.
 
 \begin{figure}
 \includegraphics[width=450px]{images/autocomplete} \caption{The tab auto-complete of RStudio.}\label{fig:autocomplete}
@@ -1042,19 +1170,36 @@ autocomplete function in RStudio. Compare it with the
 
 \subsubsection{Important Base R functions}\label{important-base-r-functions}
 
-When you install \emph{R} you will have access to a range of functions including options for data wrangling and statistical analysis. These functions that are included in the default installation are typically referred to as Base \emph{R} . There is a very useful overview that shows the most important Base \emph{R} functions.
+When you install \emph{R} you will have access to a range of functions
+including options for data wrangling and statistical analysis. These
+functions that are included in the default installation are typically
+referred to as Base \emph{R} . There is a very useful overview that shows the
+most important Base \emph{R} functions.
 
-An overview of this functions is online available as pdf and call the ``\hyperref[cheatsheets]{Base R cheat sheet}''.
+An overview of this functions is online available as pdf and call the
+``\hyperref[cheatsheets]{Base R cheat sheet}''.
 
-Don't worry, you don't have to know this functions. You just have to know \textbf{how to figure out} which function is needed to accomplish you task and where you find to detailed information how to use this function (see section \ref{findinghelp}).
+Don't worry, you don't have to know this functions. You just have to
+know \textbf{how to figure out} which function is needed to accomplish you
+task and where you find to detailed information how to use this function
+(see section \ref{findinghelp}).
 
 \subsubsection{User-defined functions}\label{user-defined-functions}
 
-The real power of a programming language is that you can develop your own functions that accomplish reoccurring tasks or that this way facilitate or structures your analysis.
+The real power of a programming language is that you can develop your
+own functions that accomplish reoccurring tasks or that this way
+facilitate or structures your analysis.
 
-Moreover, there are many collections of additional functions for specific tasks available online. They extend your \emph{R} functionality and have been programmed by other data analysts or statisticians. This extensions are called in \emph{R} ``\textbf{packages}''.
+Moreover, there are many collections of additional functions for
+specific tasks available online. They extend your \emph{R} functionality and
+have been programmed by other data analysts or statisticians. This
+extensions are called in \emph{R} ``\textbf{packages}''.
 
-Later in the course we will a package called \href{https://www.tidyverse.org/}{Tidyverse}, which extends the \emph{R} by many convenient functions for data handling. But for know, let's keep it simple and just focus for now on the usages of the basic built-in functions in \emph{R}.
+Later in the course we will a package called
+\href{https://www.tidyverse.org/}{Tidyverse}, which extends the \emph{R} by many
+convenient functions for data handling. But for know, let's keep it
+simple and just focus for now on the usages of the basic built-in
+functions in \emph{R}.
 
 \begin{geek}
 If you want to develop your own functions (or even packages), please
@@ -1236,8 +1381,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.25689836 0.75509605 0.67163154 0.91157643 0.23637495 0.99402050
-##  [7] 0.86152004 0.58224126 0.89015177 0.01345763
+##  [1] 0.694443426 0.481601506 0.001420566 0.222730153 0.324234738 0.414823752
+##  [7] 0.551713505 0.784580873 0.201889273 0.790476607
 \end{verbatim}
 
 \begin{Shaded}
@@ -1247,8 +1392,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 31.12004 37.02810 35.14296 13.61243 79.91235 74.95678 80.21802 23.60923
-##  [9] 44.09784 14.10295
+##  [1] 93.34503 40.96010 91.48611 34.83964 39.38610 72.62211 73.47119 47.05555
+##  [9] 57.14635 40.58163
 \end{verbatim}
 
 \begin{geek}
@@ -1935,14 +2080,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a        variable_b         variable_c
-##  Min.   :-169.87   Min.   :-3.58610   Min.   :10  
-##  1st Qu.:   7.62   1st Qu.:-0.81751   1st Qu.:10  
-##  Median :  73.73   Median :-0.09673   Median :10  
-##  Mean   :  77.17   Mean   : 0.01977   Mean   :10  
-##  3rd Qu.: 139.99   3rd Qu.: 0.57984   3rd Qu.:10  
-##  Max.   : 400.10   Max.   : 2.84843   Max.   :10  
-##                    NA's   :131
+##    variable_a         variable_b         variable_c
+##  Min.   :-263.898   Min.   :-2.13149   Min.   :10  
+##  1st Qu.:   7.317   1st Qu.:-0.51942   1st Qu.:10  
+##  Median :  73.511   Median : 0.19181   Median :10  
+##  Mean   :  80.140   Mean   : 0.05377   Mean   :10  
+##  3rd Qu.: 170.617   3rd Qu.: 0.66650   3rd Qu.:10  
+##  Max.   : 394.938   Max.   : 1.97872   Max.   :10  
+##                     NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2269,7 +2414,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are sensational!"
+## [1] "You are astonishing!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -2474,13 +2619,13 @@ As with all \emph{R} -packages, if you want to make use of it in yours scripts, 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching core tidyverse packages --------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
+## -- Attaching core tidyverse packages ------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse 2.0.0 --
 ## v dplyr     1.1.4     v readr     2.1.5
 ## v forcats   1.0.0     v stringr   1.5.1
-## v ggplot2   3.5.2     v tibble    3.2.1
+## v ggplot2   3.5.2     v tibble    3.3.0
 ## v lubridate 1.9.4     v tidyr     1.3.1
-## v purrr     1.0.4     
-## -- Conflicts --------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## v purrr     1.2.1     
+## -- Conflicts ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
@@ -4315,7 +4460,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5949924
+## [1] 0.5545033
 \end{verbatim}
 
 \webexunhide

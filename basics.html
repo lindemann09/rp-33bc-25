@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)</title>
   <meta name="description" content="4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)" />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Oliver Lindemann" />
 
 
-<meta name="date" content="2026-03-11" />
+<meta name="date" content="2026-03-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -284,14 +284,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="basics" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> Basics of Programming in R<a href="basics.html#basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Learning to work with <em>R</em> requires a little knowledge about basic concepts of computer programming. This is maybe a bit technical at the beginning. However, having an insight in this basics makes it later much easy to deal with real data analysis in <em>R</em> later.</p>
-<p>Thus, the section covers the basics of the <em>R</em> programming language. If you are already familiar with any another programming language, I guess these things are not new for you.</p>
+<p>Learning to work with <em>R</em> requires a little knowledge about basic
+concepts of computer programming. This is maybe a bit technical at the
+beginning. However, having an insight in this basics makes it later much
+easy to deal with real data analysis in <em>R</em> later.</p>
+<p>Thus, the section covers the basics of the <em>R</em> programming language. If
+you are already familiar with any another programming language, I guess
+these things are not new for you.</p>
 <div id="comments-in-program-code" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Comments in Program Code<a href="basics.html#comments-in-program-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before we have a look at the first <em>R</em> code examples, you should know that <em>R</em> ignores everything that follows a hashtag <code>#</code>. That is, text after a <code>#</code> will not be executed. Hashtags are used to add comments to <em>R</em>-code. The comments help to document and explains the code and make it thus more readable for humans. Comments in <em>R</em> code are printed in italic font and a different color by <em>RStudio</em> (and in the manual). See this example:</p>
+<p>Before we have a look at the first <em>R</em> code examples, you should know
+that <em>R</em> ignores everything that follows a hashtag <code>#</code>. That is, text
+after a <code>#</code> will not be executed. Hashtags are used to add comments to
+<em>R</em>-code. The comments help to document and explains the code and make
+it thus more readable for humans. Comments in <em>R</em> code are printed in
+italic font and a different color by <em>RStudio</em> (and in the manual). See
+this example:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="basics.html#cb4-1" tabindex="-1"></a><span class="co"># Example of code with comments</span></span>
 <span id="cb4-2"><a href="basics.html#cb4-2" tabindex="-1"></a>x <span class="ot">=</span> a <span class="sc">/</span> b       <span class="co"># dividing a by b and storing the result in x</span></span></code></pre></div>
-<p>That is, if you try out the code examples, you can simple ignore the comment.</p>
+<p>That is, if you try out the code examples, you can simple ignore the
+comment.</p>
 <div class="important">
 <p>
 If you later develop your own analyses scripts in <em>R</em>, it is
@@ -304,12 +316,15 @@ codes works.
 </div>
 <div id="variables-and-objects" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Variables and Objects<a href="basics.html#variables-and-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Everything that is stored in <em>R</em> is called an <strong>object</strong>. The most basic example for an object is an numerical <strong>variable</strong>. For instance,</p>
+<p>Everything that is stored in <em>R</em> is called an <strong>object</strong>. The most basic
+example for an object is an numerical <strong>variable</strong>. For instance,</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="basics.html#cb5-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">9</span></span>
 <span id="cb5-2"><a href="basics.html#cb5-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fl">2724.54</span></span>
 <span id="cb5-3"><a href="basics.html#cb5-3" tabindex="-1"></a>third_variable <span class="ot">&lt;-</span> <span class="dv">71</span></span></code></pre></div>
-<p>In this example, the numerical <code>9</code>, <code>2724.54</code> and <code>71</code> are stored in the variables with the names <code>a</code>, <code>b</code> and <code>third_variable</code>.
-If you want to print out the content of a certain object or variable, you can use the <code>print()</code>-command together with the variable.</p>
+<p>In this example, the numerical <code>9</code>, <code>2724.54</code> and <code>71</code> are stored in the
+variables with the names <code>a</code>, <code>b</code> and <code>third_variable</code>. If you want to
+print out the content of a certain object or variable, you can use the
+<code>print()</code>-command together with the variable.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="basics.html#cb6-1" tabindex="-1"></a><span class="fu">print</span>(b)</span></code></pre></div>
 <pre><code>## [1] 2724.54</code></pre>
 <p><span class="math inline">\(\ldots\)</span> or even simpler, just enter the variable name in the console</p>
@@ -323,31 +338,51 @@ objects in <em>R</em>.
 </div>
 <div id="variable-environment" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Variable Environment<a href="basics.html#variable-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>All variables are sorted in the data workspace or environment. In RStudio, you can find the current content of the workspace with all variables the right top panel called “environment”.</p>
-<p>Alternatively, the command <code>ls()</code> lists all objects variables in the R console.</p>
+<p>All variables are sorted in the data workspace or environment. In
+RStudio, you can find the current content of the workspace with all
+variables the right top panel called “environment”.</p>
+<p>Alternatively, the command <code>ls()</code> lists all objects variables in the R
+console.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="basics.html#cb10-1" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot;              &quot;b&quot;              &quot;data_folder&quot;    &quot;hide&quot;          
 ## [5] &quot;is_latex&quot;       &quot;third_variable&quot; &quot;unhide&quot;</code></pre>
 </div>
 <div id="assign" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Equal Sign Assignments (<code>=</code>)<a href="basics.html#assign" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>As you have see above, to assign a value to an object (i.e., variable) with the left arrow <code>&lt;-</code>. In RStudio, the shortcut <code>alt &amp; -</code> is very handy for quickly typing this sign. Check it out.</p>
-<p>Instead of typing an left arrow <code>&lt;-</code> you can use the equal sign <code>=</code>. This two comments have the identical effect:</p>
+<p>As you have see above, to assign a value to an object (i.e., variable)
+with the left arrow <code>&lt;-</code>. In RStudio, the shortcut <code>alt &amp; -</code> is very
+handy for quickly typing this sign. Check it out.</p>
+<p>Instead of typing an left arrow <code>&lt;-</code> you can use the equal sign <code>=</code>.
+This two comments have the identical effect:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="basics.html#cb12-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">13</span></span>
 <span id="cb12-2"><a href="basics.html#cb12-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">13</span></span></code></pre></div>
-<p>Many data scientists find the equal-sign syntax easier to type and more natural to read. If you also prefer using <code>=</code> instead of <code>&lt;-</code>, just do it. It’s not a problem.</p>
-<p>You just need to know, that the coding style guidelines in the <em>R</em> community suggest to use the <code>&lt;-</code> syntax. (see e.g. <a href="https://www.r-bloggers.com/why-do-we-use-arrow-as-an-assignment-operator/">here</a> for reasons). Most examples and documentations that you find online use therefore the arrow as the assignment operator.</p>
+<p>Many data scientists find the equal-sign syntax easier to type and more
+natural to read. If you also prefer using <code>=</code> instead of <code>&lt;-</code>, just do
+it. It’s not a problem.</p>
+<p>You just need to know, that the coding style guidelines in the <em>R</em>
+community suggest to use the <code>&lt;-</code> syntax. (see e.g.
+<a href="https://www.r-bloggers.com/why-do-we-use-arrow-as-an-assignment-operator/">here</a>
+for reasons). Most examples and documentations that you find online use
+therefore the arrow as the assignment operator.</p>
 <p>To avoid any confusion, the current manual uses the <code>&lt;-</code> operator .</p>
 </div>
 <div id="left-and-right-hand-side-assignments" class="section level3 hasAnchor" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> Left and Right Hand Side Assignments<a href="basics.html#left-and-right-hand-side-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In <em>R</em>, there are two different ways to assign a value to a variable; you can either assign from left to right or from right to left in R. That is, instead of using <code>&lt;-</code> or <code>=</code>to assign a value to a variable (left-hand-side assignment), you can also work with so-called the right-hand-side assignments (<code>-&gt;</code>). These comments illustrate the principle:</p>
+<p>In <em>R</em>, there are two different ways to assign a value to a variable;
+you can either assign from left to right or from right to left in R.
+That is, instead of using <code>&lt;-</code> or <code>=</code>to assign a value to a variable
+(left-hand-side assignment), you can also work with so-called the
+right-hand-side assignments (<code>-&gt;</code>). These comments illustrate the
+principle:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="basics.html#cb13-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">13</span>       <span class="co"># left-hand-side assignment</span></span>
 <span id="cb13-2"><a href="basics.html#cb13-2" tabindex="-1"></a><span class="dv">13</span> <span class="ot">-&gt;</span> x       <span class="co"># right-hand-side assignment</span></span>
 <span id="cb13-3"><a href="basics.html#cb13-3" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="basics.html#cb13-4" tabindex="-1"></a>a <span class="ot">&lt;-</span> b        <span class="co"># a receives the value of b</span></span>
 <span id="cb13-5"><a href="basics.html#cb13-5" tabindex="-1"></a>a <span class="ot">-&gt;</span> b        <span class="co"># b receives the value of a</span></span></code></pre></div>
-<p>Left-hand-side assignments are most common among users, because the are similar of what we are used to in mathematical equations. You will see later in the course (when working with <strong>pipes</strong>), why right-hand-side assignment can be very elegant and efficient for data science.</p>
+<p>Left-hand-side assignments are most common among users, because the are
+similar of what we are used to in mathematical equations. You will see
+later in the course (when working with <strong>pipes</strong>), why right-hand-side
+assignment can be very elegant and efficient for data science.</p>
 <div class="myexercise">
 <p>
 What happens in the command below? What are the changes variable
@@ -370,7 +405,9 @@ Solution
 </div>
 <div id="basic-operations" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Basic operations<a href="basics.html#basic-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You use <em>R</em> as a calculator and perform basic operations on numbers and variables numbers. Just enter the following examples the console and check the results:</p>
+<p>You use <em>R</em> as a calculator and perform basic operations on numbers and
+variables numbers. Just enter the following examples the console and
+check the results:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="basics.html#cb15-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb15-2"><a href="basics.html#cb15-2" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="basics.html#cb15-3" tabindex="-1"></a><span class="dv">12</span> <span class="sc">+</span> <span class="dv">6</span></span>
@@ -378,11 +415,14 @@ Solution
 <span id="cb15-5"><a href="basics.html#cb15-5" tabindex="-1"></a><span class="dv">210</span> <span class="sc">/</span> <span class="dv">3</span></span>
 <span id="cb15-6"><a href="basics.html#cb15-6" tabindex="-1"></a>(a <span class="sc">-</span> <span class="dv">3</span>) <span class="sc">/</span> <span class="dv">4</span></span>
 <span id="cb15-7"><a href="basics.html#cb15-7" tabindex="-1"></a><span class="dv">4</span><span class="sc">**</span><span class="dv">3</span>     <span class="co"># 4 to the power of 5</span></span></code></pre></div>
-<p>Of course, the result of a calculations can be stored in new variables, for instance:</p>
+<p>Of course, the result of a calculations can be stored in new variables,
+for instance:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="basics.html#cb16-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> a <span class="sc">*</span> <span class="dv">7</span></span>
 <span id="cb16-2"><a href="basics.html#cb16-2" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 63</code></pre>
-<p>Look at the following example, which increases the value of the variable <code>x</code> by 1. To do so, it stores the result of the operation <code>x + 1</code> again in <code>x</code>:</p>
+<p>Look at the following example, which increases the value of the variable
+<code>x</code> by 1. To do so, it stores the result of the operation <code>x + 1</code> again
+in <code>x</code>:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="basics.html#cb18-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">9</span></span>
 <span id="cb18-2"><a href="basics.html#cb18-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb18-3"><a href="basics.html#cb18-3" tabindex="-1"></a>x</span></code></pre></div>
@@ -406,16 +446,20 @@ Solution
 <h2><span class="header-section-number">4.4</span> Non-numerical data types<a href="basics.html#non-numerical-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="character" class="section level3 hasAnchor" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> Character<a href="basics.html#character" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Besides numeric values as in the example above, <em>R</em> can store text (called <code>character</code>) in variables.</p>
+<p>Besides numeric values as in the example above, <em>R</em> can store text
+(called <code>character</code>) in variables.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="basics.html#cb22-1" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">&quot;Erasmus&quot;</span></span></code></pre></div>
-<p>You can see the new variable in the current workspace (see ‘’environment’’-panel).</p>
-<p>Certain operations can be only performed with certain data types. For instance,
-it does not make sense to substract or add to text string, right? See what happens:</p>
+<p>You can see the new variable in the current workspace (see
+‘’environment’’-panel).</p>
+<p>Certain operations can be only performed with certain data types. For
+instance, it does not make sense to substract or add to text string,
+right? See what happens:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="basics.html#cb23-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="st">&quot;Hello&quot;</span></span>
 <span id="cb23-2"><a href="basics.html#cb23-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">&quot;World&quot;</span></span></code></pre></div>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="basics.html#cb24-1" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
 <pre><code>## Error in a + b : non-numeric argument to binary operator</code></pre>
-<p>If you want to concatenate two strings you have to use the function <code>paste</code>:</p>
+<p>If you want to concatenate two strings you have to use the function
+<code>paste</code>:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="basics.html#cb26-1" tabindex="-1"></a><span class="fu">paste</span>(a, b)</span></code></pre></div>
 <pre><code>## [1] &quot;Hello World&quot;</code></pre>
 <div class="important">
@@ -437,11 +481,17 @@ section <span class="citation">@ref</span>(comparediffdata)
 </div>
 <div id="logicals" class="section level3 hasAnchor" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> Logicals<a href="basics.html#logicals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Another often reoccurring data type is call <em>logical</em> (in other programming languages it’s other call <em>boolean</em>). A logical can be only <code>TRUE</code> or <code>FALSE</code> (typed in capitals without quotation marks); it is in other words a binary variable.</p>
-<p>Logicals are very important, because are returned by <em>R</em> if you make a comparison of the numbers (see section <a href="basics.html#comparing">4.5</a>.)</p>
+<p>Another often reoccurring data type is call <em>logical</em> (in other
+programming languages it’s other call <em>boolean</em>). A logical can be only
+<code>TRUE</code> or <code>FALSE</code> (typed in capitals without quotation marks); it is in
+other words a binary variable.</p>
+<p>Logicals are very important, because are returned by <em>R</em> if you make a
+comparison of the numbers (see section <a href="basics.html#comparing">4.5</a>.)</p>
 <div id="negation" class="section level4 unnumbered hasAnchor">
 <h4>Negation: <code>!</code><a href="basics.html#negation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In <em>R</em>, <code>!</code> is used for the negation of logicals and reads like “<em>is not</em>”. It converts, in other words, a <code>TRUE</code> to <code>FALSE</code> and <code>FALSE</code> to <code>TRUE</code>:</p>
+<p>In <em>R</em>, <code>!</code> is used for the negation of logicals and reads like “<em>is
+not</em>”. It converts, in other words, a <code>TRUE</code> to <code>FALSE</code> and <code>FALSE</code> to
+<code>TRUE</code>:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="basics.html#cb28-1" tabindex="-1"></a><span class="sc">!</span><span class="cn">TRUE</span>    <span class="co">#  reads like &quot;is not true&quot;</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="basics.html#cb30-1" tabindex="-1"></a><span class="sc">!</span><span class="cn">FALSE</span>   <span class="co">#  reads like &quot;is not false&quot;</span></span></code></pre></div>
@@ -450,11 +500,15 @@ section <span class="citation">@ref</span>(comparediffdata)
 </div>
 <div id="comparediffdata" class="section level3 hasAnchor" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> Combining different data types<a href="basics.html#comparediffdata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Please note, that you can preform the same operation that not combing a numerical and text variable is, of course, not possible. Try what happens if you type:</p>
+<p>Please note, that you can preform the same operation that not combing a
+numerical and text variable is, of course, not possible. Try what
+happens if you type:</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="basics.html#cb32-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">4</span></span>
 <span id="cb32-2"><a href="basics.html#cb32-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">&quot;12&quot;</span></span>
 <span id="cb32-3"><a href="basics.html#cb32-3" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
-<p>The third line results in an error, because <code>a</code> is a number and <code>b</code> is a text object. Combining this different data types is not possible, because <em>R</em> does not know what to do.</p>
+<p>The third line results in an error, because <code>a</code> is a number and <code>b</code> is a
+text object. Combining this different data types is not possible,
+because <em>R</em> does not know what to do.</p>
 <div class="myexercise">
 <p>
 Why does this work?
@@ -485,11 +539,17 @@ Solution
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="basics.html#cb36-1" tabindex="-1"></a>a <span class="sc">&lt;</span> b</span>
 <span id="cb36-2"><a href="basics.html#cb36-2" tabindex="-1"></a>a <span class="sc">==</span> b   <span class="co"># Are a and b are equal?</span></span>
 <span id="cb36-3"><a href="basics.html#cb36-3" tabindex="-1"></a>a <span class="sc">!=</span> b   <span class="co"># Is a unequal to b?</span></span></code></pre></div>
-<p>Note that <em>R</em> needs two equal signs <code>==</code> for an ‘’is-equal-comparison’’. One equal sign is interpreted by <em>R</em> as an assignment, similar to <code>&lt;-</code> (see section <a href="basics.html#assign">4.2.2</a>).</p>
+<p>Note that <em>R</em> needs two equal signs <code>==</code> for an ‘’is-equal-comparison’’.
+One equal sign is interpreted by <em>R</em> as an assignment, similar to <code>&lt;-</code>
+(see section <a href="basics.html#assign">4.2.2</a>).</p>
 </div>
 <div id="functions" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Functions<a href="basics.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As other programming languages, <em>R</em> has <strong>functions</strong> to perform a specific tasks in a program, for instance, to process or manipulate data. A function “returns” a results of the command or the processing. For instance, the function <code>ls()</code> lists current variables in the workspace.</p>
+<p>As other programming languages, <em>R</em> has <strong>functions</strong> to perform a
+specific tasks in a program, for instance, to process or manipulate
+data. A function “returns” a results of the command or the processing.
+For instance, the function <code>ls()</code> lists current variables in the
+workspace.</p>
 <div class="important">
 <p>
 To execute a function, you always have call the function name
@@ -503,10 +563,15 @@ the function name.)
 </div>
 <div id="arguments" class="section level3 hasAnchor" number="4.6.1">
 <h3><span class="header-section-number">4.6.1</span> Arguments<a href="basics.html#arguments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Often, functions take one or more arguments. The arguments are for instance data to be processed or certain information that are required to execute the task. For instance,</p>
+<p>Often, functions take one or more arguments. The arguments are for
+instance data to be processed or certain information that are required
+to execute the task. For instance,</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="basics.html#cb37-1" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">64</span>)</span></code></pre></div>
 <pre><code>## [1] 4.158883</code></pre>
-<p>returns the logarithm natural of 13, <span class="math inline">\(\log_e(13)\)</span>, and prints it out in the RStudio console. You can also save the result directly in another variable, because you want to do some further processing later with it or you can combine functions. For example:</p>
+<p>returns the logarithm natural of 13, <span class="math inline">\(\log_e(13)\)</span>, and prints it out in
+the RStudio console. You can also save the result directly in another
+variable, because you want to do some further processing later with it
+or you can combine functions. For example:</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="basics.html#cb39-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="dv">64</span>)</span></code></pre></div>
 <div class="simple">
 <p>
@@ -514,9 +579,12 @@ the function name.)
 functions in <em>R</em>.</a>
 </p>
 </div>
-<p>You can also feed the result of a function directly into another function. For example:</p>
+<p>You can also feed the result of a function directly into another
+function. For example:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="basics.html#cb40-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">log</span>(<span class="dv">64</span>))</span></code></pre></div>
-<p><code>sqrt()</code> is the command for the square root. This nesting of functions and expressions makes it the implement mathematical expression in <em>R</em> very straightforward. For instance, is</p>
+<p><code>sqrt()</code> is the command for the square root. This nesting of functions
+and expressions makes it the implement mathematical expression in <em>R</em>
+very straightforward. For instance, is</p>
 <div class="myexercise">
 <p>
 Write the R code for the following equation:
@@ -535,15 +603,24 @@ the environment panel.
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="basics.html#cb41-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">15</span><span class="sc">**</span><span class="fu">log</span>(<span class="dv">12</span>) <span class="sc">/</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fu">sin</span>(<span class="fl">4.5</span><span class="sc">*</span>pi))</span>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="basics.html#cb41-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">15</span><span class="sc">**</span>(<span class="fu">log</span>(<span class="dv">12</span>) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sin</span>(<span class="fl">4.5</span> <span class="sc">*</span> pi))))</span>
 <span id="cb41-2"><a href="basics.html#cb41-2" tabindex="-1"></a><span class="co"># Sorry, I know the example is not a very meaningful.</span></span></code></pre></div>
 </div>
-<p>Importantly: Functions expect a specific data type as argument. If the type of the argument is not correct, you will receive an error. For instance, the function <code>sin()</code> (the sinus) expects a number not a text string. Look what happens:</p>
+<p>Importantly: Functions expect a specific data type as argument. If the
+type of the argument is not correct, you will receive an error. For
+instance, the function <code>sin()</code> (the sinus) expects a number not a text
+string. Look what happens:</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="basics.html#cb42-1" tabindex="-1"></a>x <span class="ot">=</span> <span class="st">&quot;1987&quot;</span></span>
 <span id="cb42-2"><a href="basics.html#cb42-2" tabindex="-1"></a><span class="fu">sin</span>(x)</span></code></pre></div>
 <p><strong>Required and optional arguments</strong></p>
-<p>Some arguments of functions are required (that is, you have to specify this them) and others are optional. Optional arguments will often use a default value (normally specified in the help documentation), if you do not enter any value.</p>
-<p>For instance, if you just call <code>log(64)</code> you get the natural logarithm <span class="math inline">\(\log_e(64)\)</span>. If you want to have the logarithm to a different base, e.g. <span class="math inline">\(\log_{2}\)</span> or <span class="math inline">\(\log_{10}\)</span>, you have to specify the optional argument <code>base</code> of the <code>log</code> function:</p>
+<p>Some arguments of functions are required (that is, you have to specify
+this them) and others are optional. Optional arguments will often use a
+default value (normally specified in the help documentation), if you do
+not enter any value.</p>
+<p>For instance, if you just call <code>log(64)</code> you get the natural logarithm
+<span class="math inline">\(\log_e(64)\)</span>. If you want to have the logarithm to a different base,
+e.g. <span class="math inline">\(\log_{2}\)</span> or <span class="math inline">\(\log_{10}\)</span>, you have to specify the optional
+argument <code>base</code> of the <code>log</code> function:</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="basics.html#cb43-1" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">64</span>, <span class="at">base=</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="basics.html#cb45-1" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">64</span>, <span class="at">base=</span><span class="dv">10</span>)</span></code></pre></div>
@@ -551,38 +628,80 @@ Solution
 </div>
 <div id="builtinhelp" class="section level3 hasAnchor" number="4.6.2">
 <h3><span class="header-section-number">4.6.2</span> Built-in help for functions<a href="basics.html#builtinhelp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>R</em> provides hundreds functions. As you will see late in section <a href="packages.html#packages">8</a>, you can install additional packages for specific tasks, which provide basically collections of extra functions. That is, the amount of functions that you can use in <em>R</em> is almost endless.</p>
-<p>But how do you know what a specific functions is doing and which arguments you can or have to define to use it correctly. Fortunately, <em>R</em> has a <strong>built-in help system</strong>. You can look up all the arguments that a function takes by using the help documentation by using the format “<code>?function</code>”.</p>
-<p>As an example, let’s look at the help documentation for the function <code>rnorm()</code> which randomly generates a set of numbers with a normal distribution.</p>
+<p><em>R</em> provides hundreds functions. As you will see late in section
+<a href="packages.html#packages">8</a>, you can install additional packages for specific tasks,
+which provide basically collections of extra functions. That is, the
+amount of functions that you can use in <em>R</em> is almost endless.</p>
+<p>But how do you know what a specific functions is doing and which
+arguments you can or have to define to use it correctly. Fortunately,
+<em>R</em> has a <strong>built-in help system</strong>. You can look up all the arguments
+that a function takes by using the help documentation by using the
+format “<code>?function</code>”.</p>
+<p>As an example, let’s look at the help documentation for the function
+<code>rnorm()</code> which randomly generates a set of numbers with a normal
+distribution.</p>
 </div>
 <div id="examplernorm" class="section level3 hasAnchor" number="4.6.3">
 <h3><span class="header-section-number">4.6.3</span> Example<a href="basics.html#examplernorm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Display the documentation of the function <code>rnorm</code> by typing</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="basics.html#cb47-1" tabindex="-1"></a>?rnom</span></code></pre></div>
-<p>The help documentation should appear in the bottom right panel. In the usage section of the documentation, we see that <code>rnorm()</code> takes the following form:</p>
+<p>The help documentation should appear in the bottom right panel. In the
+usage section of the documentation, we see that <code>rnorm()</code> takes the
+following form:</p>
 <ul>
 <li><code>rnorm(n, mean = 0, sd = 1)</code></li>
 </ul>
-<p>In the arguments section, there are explanations for each of the arguments. <code>n</code> is the number of random numbers we want to create, <code>mean</code> is the mean of the data points we will create and <code>sd</code> is the standard deviation of the set. In the details section it notes that if no values are entered for <code>mean</code> and <code>sd</code> it will use a default of 0 and 1 for these values. Because there is no default value for <code>n</code> it must be specified otherwise the code won’t run.</p>
-<p>Let’s try an example and just change the required argument <code>n</code> to ask <em>R</em> to produce 5 random numbers.</p>
+<p>In the arguments section, there are explanations for each of the
+arguments. <code>n</code> is the number of random numbers we want to create, <code>mean</code>
+is the mean of the data points we will create and <code>sd</code> is the standard
+deviation of the set. In the details section it notes that if no values
+are entered for <code>mean</code> and <code>sd</code> it will use a default of 0 and 1 for
+these values. Because there is no default value for <code>n</code> it must be
+specified otherwise the code won’t run.</p>
+<p>Let’s try an example and just change the required argument <code>n</code> to ask
+<em>R</em> to produce 5 random numbers.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="basics.html#cb48-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1] -0.19607915  0.07894052 -1.78598958 -1.08045178 -0.88142699</code></pre>
-<p>The random numbers have a mean of 0 and an SD of 1. Of course, since this are random numbers, you have probably got different numbers. Run the function again and you will see that you get each time different ‘’random’’ numbers.</p>
-<p>Now we can change the additional arguments to produce a different set of numbers.</p>
+<pre><code>## [1] 0.5441182 0.4911221 0.8112814 0.9867317 0.1373393</code></pre>
+<p>The random numbers have a mean of 0 and an SD of 1. Of course, since
+this are random numbers, you have probably got different numbers. Run
+the function again and you will see that you get each time different
+‘’random’’ numbers.</p>
+<p>Now we can change the additional arguments to produce a different set of
+numbers.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="basics.html#cb50-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## [1] 113.22833 100.88168  93.44593 114.77607 113.55299</code></pre>
-<p>This time <em>R</em> has still produced 5 random numbers, but now this set of numbers has a mean of 100 and a standard deviation of 15 as specified (this is the distribution of the scores in many IQ tests). Always remember to use the help documentation to help you understand what arguments a function requires.</p>
+<pre><code>## [1]  94.08820 129.54414 117.87174 108.81208  83.29531</code></pre>
+<p>This time <em>R</em> has still produced 5 random numbers, but now this set of
+numbers has a mean of 100 and a standard deviation of 15 as specified
+(this is the distribution of the scores in many IQ tests). Always
+remember to use the help documentation to help you understand what
+arguments a function requires.</p>
 </div>
 <div id="argument-names" class="section level3 hasAnchor" number="4.6.4">
 <h3><span class="header-section-number">4.6.4</span> Argument names<a href="basics.html#argument-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In the above examples, we have written out the argument names in our code (e.g., <code>n</code>, <code>mean</code>, <code>sd</code>), however, this is not strictly necessary. The following two lines of code would both produce the same result (although each time you run <code>rnorm()</code> it will produce a slightly different set of numbers, because it’s random, but they would still have the same mean and SD):</p>
+<p>In the above examples, we have written out the argument names in our
+code (e.g., <code>n</code>, <code>mean</code>, <code>sd</code>), however, this is not strictly necessary.
+The following two lines of code would both produce the same result
+(although each time you run <code>rnorm()</code> it will produce a slightly
+different set of numbers, because it’s random, but they would still have
+the same mean and SD):</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="basics.html#cb52-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
 <span id="cb52-2"><a href="basics.html#cb52-2" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span></code></pre></div>
-<p>Importantly, if you do not write out the argument names, R will use the default order of arguments, that is for <code>rnorm</code> it will assume that the first number you enter is <code>n</code>. the second number is mean and the third number is <code>sd</code>.</p>
-<p>If you write out the argument names then you can write the arguments in whatever order you like:</p>
+<p>Importantly, if you do not write out the argument names, R will use the
+default order of arguments, that is for <code>rnorm</code> it will assume that the
+first number you enter is <code>n</code>. the second number is mean and the third
+number is <code>sd</code>.</p>
+<p>If you write out the argument names then you can write the arguments in
+whatever order you like:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="basics.html#cb53-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">sd =</span> <span class="dv">2</span>, <span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="dv">10</span>)</span></code></pre></div>
-<p>When you are first learning R, you may find it useful to write out the argument names as it can help you remember and understand what each part of the function is doing. However, as your skills progress you may find it quicker to omit the argument names and you will also see examples of code online that do not use argument names so it is important to be able to understand which argument each bit of code is referring to (or look up the help documentation to check).</p>
-<p>In this manual, I will mostly write out the argument names the first time , however, in subsequent uses they may be omitted.</p>
+<p>When you are first learning R, you may find it useful to write out the
+argument names as it can help you remember and understand what each part
+of the function is doing. However, as your skills progress you may find
+it quicker to omit the argument names and you will also see examples of
+code online that do not use argument names so it is important to be able
+to understand which argument each bit of code is referring to (or look
+up the help documentation to check).</p>
+<p>In this manual, I will mostly write out the argument names the first
+time , however, in subsequent uses they may be omitted.</p>
 <div class="important">
 <p>
 The assign a value to an named argument of the function, you have to
@@ -592,7 +711,13 @@ use the equal sign <code>=</code> and not <code>&lt;-</code>.
 </div>
 <div id="tab-auto-complete" class="section level3 hasAnchor" number="4.6.5">
 <h3><span class="header-section-number">4.6.5</span> Tab auto-complete<a href="basics.html#tab-auto-complete" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>One very useful feature of R Studio is the tab auto-complete for functions (see Figure <a href="basics.html#fig:autocomplete">4.1</a>). If you write the name of the function and then press the tab key, R Studio will show you the arguments that function takes along with a brief description. If you press enter on the argument name it will fill in the name for you, just like auto-complete on your phone. This is incredibly useful when you are first learning R and you should remember to use this feature frequently.</p>
+<p>One very useful feature of R Studio is the tab auto-complete for
+functions (see Figure <a href="basics.html#fig:autocomplete">4.1</a>). If you write the name of
+the function and then press the tab key, R Studio will show you the
+arguments that function takes along with a brief description. If you
+press enter on the argument name it will fill in the name for you, just
+like auto-complete on your phone. This is incredibly useful when you are
+first learning R and you should remember to use this feature frequently.</p>
 <div class="figure"><span style="display:block;" id="fig:autocomplete"></span>
 <img src="images/autocomplete.png" alt="The tab auto-complete of RStudio." width="450px" />
 <p class="caption">
@@ -609,15 +734,32 @@ the autocomplete function in RStudio. Compare it with the
 </div>
 <div id="important-base-r-functions" class="section level3 hasAnchor" number="4.6.6">
 <h3><span class="header-section-number">4.6.6</span> Important Base R functions<a href="basics.html#important-base-r-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When you install <em>R</em> you will have access to a range of functions including options for data wrangling and statistical analysis. These functions that are included in the default installation are typically referred to as Base <em>R</em> . There is a very useful overview that shows the most important Base <em>R</em> functions.</p>
-<p>An overview of this functions is online available as pdf and call the “<a href="readings.html#cheatsheets">Base R cheat sheet</a>”.</p>
-<p>Don’t worry, you don’t have to know this functions. You just have to know <strong>how to figure out</strong> which function is needed to accomplish you task and where you find to detailed information how to use this function (see section <a href="findinghelp.html#findinghelp">2</a>).</p>
+<p>When you install <em>R</em> you will have access to a range of functions
+including options for data wrangling and statistical analysis. These
+functions that are included in the default installation are typically
+referred to as Base <em>R</em> . There is a very useful overview that shows the
+most important Base <em>R</em> functions.</p>
+<p>An overview of this functions is online available as pdf and call the
+“<a href="readings.html#cheatsheets">Base R cheat sheet</a>”.</p>
+<p>Don’t worry, you don’t have to know this functions. You just have to
+know <strong>how to figure out</strong> which function is needed to accomplish you
+task and where you find to detailed information how to use this function
+(see section <a href="findinghelp.html#findinghelp">2</a>).</p>
 </div>
 <div id="user-defined-functions" class="section level3 hasAnchor" number="4.6.7">
 <h3><span class="header-section-number">4.6.7</span> User-defined functions<a href="basics.html#user-defined-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The real power of a programming language is that you can develop your own functions that accomplish reoccurring tasks or that this way facilitate or structures your analysis.</p>
-<p>Moreover, there are many collections of additional functions for specific tasks available online. They extend your <em>R</em> functionality and have been programmed by other data analysts or statisticians. This extensions are called in <em>R</em> “<strong>packages</strong>”.</p>
-<p>Later in the course we will a package called <a href="https://www.tidyverse.org/">Tidyverse</a>, which extends the <em>R</em> by many convenient functions for data handling. But for know, let’s keep it simple and just focus for now on the usages of the basic built-in functions in <em>R</em>.</p>
+<p>The real power of a programming language is that you can develop your
+own functions that accomplish reoccurring tasks or that this way
+facilitate or structures your analysis.</p>
+<p>Moreover, there are many collections of additional functions for
+specific tasks available online. They extend your <em>R</em> functionality and
+have been programmed by other data analysts or statisticians. This
+extensions are called in <em>R</em> “<strong>packages</strong>”.</p>
+<p>Later in the course we will a package called
+<a href="https://www.tidyverse.org/">Tidyverse</a>, which extends the <em>R</em> by many
+convenient functions for data handling. But for know, let’s keep it
+simple and just focus for now on the usages of the basic built-in
+functions in <em>R</em>.</p>
 <div class="geek">
 <p>
 If you want to develop your own functions (or even packages), please
