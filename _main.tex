@@ -213,7 +213,7 @@
 
 \title{Data Processing and Analysis in \emph{R} (2025/26)}
 \author{Oliver Lindemann}
-\date{2026-03-13}
+\date{2026-03-23}
 
 \begin{document}
 \maketitle
@@ -1075,7 +1075,7 @@ Let's try an example and just change the required argument \texttt{n} to ask
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  0.677525426 -0.205151787 -0.183258394  0.293585422 -0.005916548
+## [1]  0.7374476 -0.7459644 -0.3674303 -1.7707131 -0.3867411
 \end{verbatim}
 
 The random numbers have a mean of 0 and an SD of 1. Of course, since
@@ -1093,7 +1093,7 @@ numbers.
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  95.24454 138.59205 140.59598  87.12032  96.25018
+## [1]  98.26132  96.27358 120.41717 102.05859 100.72127
 \end{verbatim}
 
 This time \emph{R} has still produced 5 random numbers, but now this set of
@@ -1381,8 +1381,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.5419765 0.6081421 0.2159219 0.7968923 0.1799927 0.8594861 0.8280391
-##  [8] 0.0656492 0.4886064 0.4231623
+##  [1] 0.8254959 0.2845210 0.8992506 0.2641974 0.9510510 0.5304515 0.7010340
+##  [8] 0.5328169 0.9165625 0.7578258
 \end{verbatim}
 
 \begin{Shaded}
@@ -1392,8 +1392,8 @@ Drawing random numbers from a normal distribution has already been discussed in 
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 75.16997 80.79132 33.72009 95.08444 60.75937 18.82580 94.51478 88.69104
-##  [9] 74.60337 29.48324
+##  [1] 20.45037 59.12797 30.03569 10.71790 48.74376 21.59203 80.70888 48.85531
+##  [9] 84.41984 41.59888
 \end{verbatim}
 
 \begin{geek}
@@ -2080,14 +2080,14 @@ in this dataset?
 \end{Shaded}
 
 \begin{verbatim}
-##    variable_a         variable_b        variable_c
-##  Min.   :-187.325   Min.   :-2.7290   Min.   :10  
-##  1st Qu.:   4.022   1st Qu.:-0.8240   1st Qu.:10  
-##  Median :  76.951   Median :-0.1042   Median :10  
-##  Mean   :  73.744   Mean   :-0.1497   Mean   :10  
-##  3rd Qu.: 140.683   3rd Qu.: 0.5286   3rd Qu.:10  
-##  Max.   : 377.587   Max.   : 1.9557   Max.   :10  
-##                     NA's   :131
+##    variable_a        variable_b         variable_c
+##  Min.   :-201.26   Min.   :-2.22879   Min.   :10  
+##  1st Qu.:  18.31   1st Qu.:-0.64608   1st Qu.:10  
+##  Median :  88.64   Median :-0.06704   Median :10  
+##  Mean   :  81.96   Mean   :-0.07244   Mean   :10  
+##  3rd Qu.: 149.93   3rd Qu.: 0.59844   3rd Qu.:10  
+##  Max.   : 355.83   Max.   : 3.15902   Max.   :10  
+##                    NA's   :131
 \end{verbatim}
 
 \webexhide{Solution}
@@ -2414,7 +2414,7 @@ Now that the \texttt{praise} package is loaded, you can use the function in that
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "You are magnificent!"
+## [1] "You are best!"
 \end{verbatim}
 
 \emph{(As you see, you can do really useful things with \emph{R} \texttt{;-)})}
@@ -2619,13 +2619,13 @@ As with all \emph{R} -packages, if you want to make use of it in yours scripts, 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching core tidyverse packages ------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse 2.0.0 --
+## -- Attaching core tidyverse packages --------------------------------------------------------- tidyverse 2.0.0 --
 ## v dplyr     1.1.4     v readr     2.1.5
 ## v forcats   1.0.0     v stringr   1.5.1
-## v ggplot2   3.5.2     v tibble    3.3.0
+## v ggplot2   3.5.2     v tibble    3.2.1
 ## v lubridate 1.9.4     v tidyr     1.3.1
-## v purrr     1.2.1     
-## -- Conflicts ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
+## v purrr     1.0.4     
+## -- Conflicts --------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
@@ -4460,7 +4460,7 @@ By the way: To calculate the correlation coefficient \(r\), you can use the func
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5646987
+## [1] 0.5821256
 \end{verbatim}
 
 \webexunhide

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)</title>
   <meta name="description" content="4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Basics of Programming in R | Data Processing and Analysis in R (2025/26)" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Oliver Lindemann" />
 
 
-<meta name="date" content="2026-03-13" />
+<meta name="date" content="2026-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -661,7 +661,7 @@ specified otherwise the code won’t run.</p>
 <p>Let’s try an example and just change the required argument <code>n</code> to ask
 <em>R</em> to produce 5 random numbers.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="basics.html#cb48-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1]  2.14728381 -0.08029856  0.50430951  0.74841675 -0.27713607</code></pre>
+<pre><code>## [1] 1.1390987 0.3845847 1.2437149 1.1369543 0.3265131</code></pre>
 <p>The random numbers have a mean of 0 and an SD of 1. Of course, since
 this are random numbers, you have probably got different numbers. Run
 the function again and you will see that you get each time different
@@ -669,7 +669,7 @@ the function again and you will see that you get each time different
 <p>Now we can change the additional arguments to produce a different set of
 numbers.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="basics.html#cb50-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## [1]  87.67689 102.17916 118.27240  63.42829  94.93088</code></pre>
+<pre><code>## [1] 105.76518 102.13234  78.46303  87.70542  83.49627</code></pre>
 <p>This time <em>R</em> has still produced 5 random numbers, but now this set of
 numbers has a mean of 100 and a standard deviation of 15 as specified
 (this is the distribution of the scores in many IQ tests). Always
